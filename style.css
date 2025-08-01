@@ -165,7 +165,9 @@ footer {
 
 .container-social-media {
   display: flex;
-  gap: 3rem;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 3rem;
   justify-content: center;
   align-items: center;
 }
@@ -184,4 +186,32 @@ footer {
 .made-by {
   color: var(--gray);
   font-size: 0.875rem;
+}
+
+/* --- menu.html --- */
+
+.menu-main {
+  gap: 1.5rem;
+}
+
+.menu-subcontainer {
+  padding: 1rem;
+  background-color: var(--darker-gray);
+  border-radius: 0.75rem;
+}
+
+.menu-subcontainer ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+}
+
+.menu-subcontainer ul a li {
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-subcontainer ul a li:hover {
+  transform: translateX(10px);
 }
