@@ -45,7 +45,7 @@ header {
 .container-logo {
   width: 36px;
   height: 36px;
-  background-image: url("./public/images/logo.jpg");
+  background-image: url("public/images/logo.jpg");
   background-size: cover;
   border-radius: 50%;
 }
