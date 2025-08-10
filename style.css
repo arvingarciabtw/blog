@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: var(--green);
+  color: black;
+}
+
 :root {
   --darkest-black: #0c0d11;
   --darker-gray: #131417;
