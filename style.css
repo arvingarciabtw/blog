@@ -16,6 +16,9 @@
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 600px;
   font-family: "Geist", sans-serif;
@@ -34,6 +37,16 @@ ul {
 a {
   text-decoration: none;
 }
+
+code {
+  padding: 0.25rem 0.4rem;
+  border-radius: 8px;
+  background-color: var(--darker-gray);
+  color: var(--green);
+  font-size: 0.75rem;
+}
+
+/* --- NAV --- */
 
 header {
   padding: 1.5rem;
@@ -59,11 +72,14 @@ header {
   border-radius: 50%;
 }
 
+/* --- MAIN --- */
+
 main {
   padding: 0.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  flex: 1;
 }
 
 h1 {
@@ -78,7 +94,7 @@ h1 {
 }
 
 .year {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .articles-list {
@@ -158,6 +174,8 @@ hr {
   stroke: var(--gray);
 }
 
+/* --- FOOTER --- */
+
 footer {
   padding: 0.5rem 1.5rem 1.5rem 1.5rem;
   margin-top: 2rem;
@@ -227,13 +245,13 @@ footer {
 
 /* --- individual article --- */
 
-.article-main {
+article {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.article-main p {
+article p {
   font-size: 0.875rem;
   color: var(--light-gray);
   line-height: 1.5rem;
@@ -256,12 +274,12 @@ footer {
   color: var(--gray);
 }
 
-.article-main p a {
+article p a {
   color: var(--green);
   text-decoration-line: underline;
   transition: color 0.3s ease;
 }
 
-.article-main p a:hover {
+article p a:hover {
   color: #a3f992;
 }

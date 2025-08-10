@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="My blog where I write about my learnings and projects"
+    />
+    <title>Blog</title>
+    <link rel="icon" href="/public/images/logo.jpg" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <div class="container-logo"></div>
+      </a>
+      <button
+        class="hamburger-menu"
+        onclick="window.location.href='../menu.html'"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.2"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 9h16.5m-16.5 6.75h16.5"
+          />
+        </svg>
+      </button>
+    </header>
+    <main class="article-main">
+      <article>
+        <div class="container-title">
+          <h1 class="article-title">
+            Learning the foundations of web development
+          </h1>
+          <p class="article-date">Aug 10, 2025</p>
+        </div>
+        <p>
+          As with any skill that you want to learn from the beginning, you have
+          to start with the basics. The fundamentals. You need to have a good
+          foundation.
+        </p>
+        <p>
+          This week, I completed the
+          <a
+            href="https://www.theodinproject.com/paths/foundations/courses/foundations"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Foundations</a
+          >
+          course from
+          <a
+            href="https://www.theodinproject.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >The Odin Project</a
+          >
+          curriculum. At the beginning of the course, it was greatly emphasized
+          that learning to code will be hard. I also know this because I've
+          tried doing the curriculum before. The founder of The Odin Project
+          wrote this amazing
+          <a
+            href="https://dev.to/theodinproject/why-learning-to-code-is-so-damn-hard-11nn"
+            target="_blank"
+            rel="noopener noreferrer"
+            >article</a
+          >
+          on why coding is so difficult. Apart from this, the difference of
+          having a fixed mindset and a growth mindset was given great importance
+          in this
+          <a
+            href="https://www.theodinproject.com/lessons/foundations-motivation-and-mindset"
+            target="_blank"
+            rel="noopener noreferrer"
+            >chapter</a
+          >.
+        </p>
+        <p>
+          Before even diving into the basics of HTML, the basics of computers
+          and how the web works were first taught. From my understanding, this
+          is essentially what happens when you type an address into the browser
+          and press <code>Enter</code>:
+        </p>
+        <p>
+          The web browser will request the resource from the web server where
+          the resource is stored. This is done via a network protocol called
+          HTTP (Hypertext Transfer Protocol). If the request is successful, then
+          the web server will send an HTTP response back the browser with the
+          requested resource. In this process,
+          <a
+            href="https://www.cloudflare.com/learning/network-layer/internet-protocol/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >IP</a
+          >
+          essentially acts as the highway while
+          <a
+            href="https://www.techtarget.com/searchnetworking/definition/TCP-IP"
+            target="_blank"
+            rel="noopener noreferrer"
+            >TCP</a
+          >
+          acts as the transport mechanisms (like cars) that deliver your request
+          to the destination (web server).
+        </p>
+        <p>
+          Furthermore, after pressing <code>Enter</code>, your browser will ask
+          your computer if it knows the IP address of this domain name. If it
+          does, then it is simply translated to the IP address and the web
+          server can send a response back. However, if your computer does not
+          recognize the IP address associated with the domain, then your request
+          goes to a
+          <a
+            href="https://www.cloudflare.com/learning/dns/what-is-a-dns-server/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >DNS server</a
+          >
+          and it is this server that will tell the browser what the IP address
+          of the domain name is.
+        </p>
+        <p>
+          At least, that's how I understood it anyway. I'm sure it is much more
+          technical than that.
+        </p>
+        <p>
+          From this point, the basics of
+          <a
+            href="https://git-scm.com/doc"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Git</a
+          >
+          were also taught. Thankfully, I've already used Git in past personal
+          projects and my previous internship. However, this was a good
+          opportunity to practice
+          <a
+            href="https://github.com/jesseduffield/lazygit"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Lazygit</a
+          >
+          for the week since I find this to be a very useful tool!
+        </p>
+        <p>
+          And finally, we now get to
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+            target="_blank"
+            rel="noopener noreferrer"
+            >HTML</a
+          >! It was honestly quite nice having a refresher on HTML boilerplate
+          code, especially on the <code>charset</code> attribute of the meta tag
+          as well as the
+          <code
+            >name="viewport"
+            content="width=device-width,initial-scale=1.0"</code
+          >
+          to keep the site responsive.
+        </p>
+        <p>
+          Also, this
+          <a
+            href="https://internetingishard.netlify.app/html-and-css/links-and-images/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >resource</a
+          >
+          by Interneting is Hard is a fantastic read on links and images. It
+          clearly taught me the difference of absolute, relative, and
+          root-relative links. And most importantly, when I should use certain
+          image types (jpg, png, svg, gif)!
+        </p>
+        <p>
+          From this point on, everything I learned about HTML were put into
+          practice in this
+          <a
+            href="https://recipes-seven-teal.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >project</a
+          >, which is a simple recipes website. Take note, however, that there
+          is styling on the website because this project was revisited once I
+          went further along in the curriculum.
+        </p>
+        <p>
+          After this, I then had a refresher on CSS. Most notably, flexbox.
+          Admittedly, I didn't fully understand <code>flex-grow</code>,
+          <code>flex-shrink</code>, and <code>flex-basis</code> before. But now,
+          I understand it a lot more and can actually put
+          <code>flex-grow</code> to good use now. Also, this
+          <a
+            href="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >article</a
+          >
+          by Josh Comeau absolutely blew my mind on the capabilites of flexbox.
+          I didn't think dynamic layouts were possible without the use of media
+          queries, but I was astonished to see flexbox used so well!
+        </p>
+        <p>
+          At this point, I made this
+          <a
+            href="https://landing-page-sigma-peach-49.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >project</a
+          >
+          which is just a simple layout that was followed in the lesson's
+          instructions. I had a lot of fun personalizing it and making it
+          Silksong-themed! Do take note that it is not responsive since
+          responsiveness is not yet covered at this point of the curriculum.
+        </p>
+        <p>
+          We now face the beast that is
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            target="_blank"
+            rel="noopener noreferrer"
+            >JavaScript</a
+          >. From here on out, I thought that I would struggle a bit in doing
+          the projects. But surprisingly, it wasn't that bad. I have a strong
+          feeling that it's because I took this
+          <a
+            href="https://www.theodinproject.com/lessons/foundations-problem-solving"
+            target="_blank"
+            rel="noopener noreferrer"
+            >chapter</a
+          >
+          to heart, which talks about the importance of developing a problem
+          solving framework (understanding the problem, planning, and
+          pseudocode).
+        </p>
+        <p>
+          Looking back in the past, I would often just go straight to code
+          without having a concrete plan in mind, so the application's structure
+          ends up being a mess (and so I give up and delegate the debugging to
+          AI, which makes it even more of a mess). This time around though,
+          actually writing down first in plain English the flow of my
+          application helps SO much when it comes to the actual coding.
+        </p>
+        <p>
+          Anyways, here are the projects I made for the JavaScript chapter.
+          <a
+            href="https://rock-paper-scissors-mu-kohl.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Rock paper scissors</a
+          >,
+          <a
+            href="https://etch-a-sketch-indol-xi.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >etch-a-sketch</a
+          >, and a
+          <a
+            href="https://calculator-psi-black.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >calculator</a
+          >. For each project, there definitely could have been more features,
+          but I stuck with the defined scope in the respective lesson's
+          instructions. The point of these projects is to practice JavaScript
+          fundamentals anyways, so I didn't want to go over the top with
+          features.
+        </p>
+        <p>
+          I will say this though, I am not yet super familiar with the built in
+          string methods and array methods in JavaScript. Oftentimes, I had to
+          keep going back to the documentation and see what method would work
+          for my problem. Of course, re-reading documentation is perfectly
+          normal, but I do want to reach a point where I'm at least comfortable
+          with the most used methods out there.
+        </p>
+        <p>
+          On another note, this
+          <a
+            href="https://www.javascripttutorial.net/javascript-dom/javascript-event-delegation/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >article</a
+          >
+          on event delegation is such a worthwhile read. Instead of adding an
+          event listener to each element, you could just add that event listener
+          to their parent and access the <code>target</code> property that
+          references the element that dispatches the event. This is so useful,
+          and so I used this concept for my JavaScript projects.
+        </p>
+        <p>
+          I also almost forgot to mention, but I decided to integrate a little
+          bit of AI into my learning journey. However, I specifically prompt it
+          to never directly give me the solution. And instead, it should just
+          keep asking me questions until I figure out a solution to the problem
+          that I have. And honestly, it works a ton! I still have to think about
+          the problem in hand, and I do end up learning a lot at the end of it
+          all. But of course, I still pour in a considerable amount of time
+          trying to figure out the problem by myself first before asking for
+          guidance from AI.
+        </p>
+        <p>
+          For any beginners like me out there, perhaps you could use the prompt
+          that I use:
+        </p>
+        <p style="font-style: italic">
+          "You are a senior developer. I am a beginner developer. I will ask you
+          questions. However, do NOT directly give me the solution. Instead,
+          like a good senior, you should ask me questions that will challenge my
+          critical thinking to guide me in discovering or forming my own
+          solution to the problem I asked. Is this clear?"
+        </p>
+        <p>
+          That's about it for this week. Overall, it was very fun! Time to move
+          on to the
+          <a
+            href="https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Intermediate HTML and CSS</a
+          >
+          course. Excited to learn further!
+        </p>
+      </article>
+    </main>
+    <footer>
+      <div class="container-social-media">
+        <a
+          href="https://www.linkedin.com/in/arvin-garcia/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-linkedin"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://github.com/arvingarciabtw/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-github"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://x.com/arvingarciabtw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-twitter-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://bsky.app/profile/arvingarciabtw.bsky.social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bluesky"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@arvingarciabtw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-youtube"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+            />
+          </svg>
+        </a>
+      </div>
+      <p class="made-by">Made by Arvin Garcia</p>
+    </footer>
+  </body>
+</html>
