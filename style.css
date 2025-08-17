@@ -15,9 +15,9 @@
   --darkest-black: #0c0d11;
   --darker-gray: #131417;
   --green: #c6fbbb;
-  --gray: #7d7d7d;
+  --gray: #979797;
   --dark-gray: #606060;
-  --light-gray: #a4a4a4;
+  --light-gray: #b2b2b2;
 }
 
 body {
@@ -139,7 +139,7 @@ h1 {
 }
 
 hr {
-  margin-top: 2rem;
+  margin-top: 1.75rem;
   border: none;
   height: 1px;
   background-color: #535353;
@@ -286,7 +286,8 @@ article p {
 }
 
 .container-title .article-date {
-  color: var(--gray);
+  color: var(--green);
+  font-weight: 700;
 }
 
 article p a {
