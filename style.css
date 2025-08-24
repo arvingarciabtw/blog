@@ -49,6 +49,14 @@ code {
   background-color: var(--darker-gray);
   color: var(--green);
   font-size: 0.75rem;
+  line-height: 1.75;
+}
+
+pre {
+  box-sizing: content-box;
+  padding: 0.25rem;
+  background-color: var(--darker-gray);
+  border-radius: 6px;
 }
 
 /* --- NAV --- */

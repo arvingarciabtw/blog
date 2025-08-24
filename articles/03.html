@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="My blog where I write about my learnings and projects"
+    />
+    <title>Blog | Arvin Garcia</title>
+    <link rel="icon" href="/public/images/logo.jpg" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <div class="container-logo"></div>
+      </a>
+    </header>
+    <main class="article-main">
+      <article>
+        <div class="container-title">
+          <h1 class="article-title">Halfway through JavaScript</h1>
+          <p class="article-date">// Aug 24, 2025</p>
+        </div>
+        <p>This week was filled with a <em>lot</em> of JavaScript.</p>
+        <p>
+          Continuing on from where I left off last week, I moved on forward with
+          the
+          <a
+            href="https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript"
+            target="_blank"
+            rel="noopener noreferrer"
+            >JavaScript</a
+          >
+          course in The Odin Project curriculum. There's a lot of concepts to
+          unpack so far: objects, object constructors, factory functions,
+          classes, modules, package managers (<a
+            href="https://docs.npmjs.com/about-npm"
+            target="_blank"
+            rel="noopener noreferrer"
+            >npm</a
+          >), bundlers (<a
+            href="https://webpack.js.org/guides/getting-started/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Webpack</a
+          >), OOP principles, linting, and asynchronous JavaScript. That's a
+          lot, so I'll do my best to go through my learnings for each of them.
+        </p>
+        <p>
+          A simple way to organize code is by using objects to group things.
+          Typically, the best way to define objects is using the object literal
+          syntax, which looks like this:
+          <code>const anObject = { key: value };</code>. Then, when we want an
+          object that will be duplicated, we can use an object constructor which
+          is essentially just a function that has the first letter uppercased by
+          convention. This concept was put into practice in my
+          <a
+            href="https://github.com/arvingarciabtw/the-odin-project/tree/main/full-stack-javascript/fsj-02-javascript/08-library"
+            target="_blank"
+            rel="noopener noreferrer"
+            >library</a
+          >
+          project.
+        </p>
+        <p>
+          Moving forward, factory functions and the module pattern was explored.
+          Previously, with an object constructor, you'd need to use the
+          <code>new</code> keyword to create an object. But, with factory
+          functions, you set up and <em>return the new object</em> when you
+          invoke the function. My
+          <a
+            href="https://github.com/arvingarciabtw/the-odin-project/tree/main/full-stack-javascript/fsj-02-javascript/09-tic-tac-toe"
+            target="_blank"
+            rel="noopener noreferrer"
+            >tic-tac-toe</a
+          >
+          project uses this concept. An example of a factory function:
+        </p>
+        <pre><code>function createPerson(name) {
+  const username = "@" + name;
+  return { name, username } // As you can see, we return an object
+}</code></pre>
+        <p>
+          Typically, a factory function is used to make multiple objects. But,
+          there are cases where you would want only <em>one instance</em> of it,
+          and that is where an
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Immediately Invoked Function Expression (IIFE)</a
+          >
+          comes into play. This is also called the module pattern. A sample code
+          snippet is provided below, taken from a
+          <a
+            href="https://www.theodinproject.com/lessons/node-path-javascript-factory-functions-and-the-module-pattern"
+            target="_blank"
+            rel="noopener noreferrer"
+            >lesson</a
+          >
+          in The Odin Project.
+        </p>
+        <pre><code>const calculator = (function () {
+    const add = (a, b) => a + b;
+    const sub = (a, b) => a - b;
+    const mul = (a, b) => a * b;
+    const div = (a, b) => a / b;
+    return { add, sub, mul, div };
+    })();
+
+    calculator.add(3,5); // 8
+    calculator.sub(6,2); // 4
+    calculator.mul(14,5534); // 77476
+ }</code></pre>
+        <p>
+          But personally, I prefer classes much more than factory functions. You
+          can create an object using the <code>class</code> keyword, which does
+          the exact same thing as object constructors. I personally find classes
+          to be much more readable and intuitive, and so I used classes in all
+          of the projects moving forward.
+        </p>
+        <p>
+          Furthermore, ES6 (or ECMAScript 2015) introduced something called
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
+            target="_blank"
+            rel="noopener noreferrer"
+            >ES6 modules</a
+          >. It allows you to modularize JavaScript code into modules and make
+          them reusable across your application. Basically, you isolate some
+          code into its own file, then you export whatever it is other files may
+          need. Then, if other files would ever need that isolated code, these
+          files can import it!
+        </p>
+        <p>
+          Now, there are a lot of third party code out there that can help us
+          with our application. For example, in some of the projects I will
+          mention later, a utility library named <code>date-fns</code> can be
+          used to help you format your dates accordingly. To use these external
+          libraries, we can import them through the use of a package manager
+          like
+          <a
+            href="https://docs.npmjs.com/about-npm"
+            target="_blank"
+            rel="noopener noreferrer"
+            >npm</a
+          >.
+        </p>
+        <p>
+          However, having a bunch of individual modules and imported third party
+          files can reduce performance. Thankfully, bundlers like
+          <a
+            href="https://webpack.js.org/guides/getting-started/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Webpack</a
+          >
+          helps in processing and optimizing our code in various ways. I'm still
+          not entirely confident on how bundling really works, but the
+          documentation explains the necessary stuff to bundle a simple web
+          application. My
+          <a
+            href="https://github.com/arvingarciabtw/the-odin-project/tree/main/full-stack-javascript/fsj-02-javascript/10-restaurant-page"
+            target="_blank"
+            rel="noopener noreferrer"
+            >restaurant page</a
+          >
+          project used Webpack as its bundler.
+        </p>
+        <p>
+          It is also worth noting that you can have separate configurations for
+          the development and production environment of your application. The
+          <a
+            href="https://webpack.js.org/guides/production/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >documentation</a
+          >
+          for this helps greatly, and you can even use a utility called
+          <code>webpack-merge</code> to make the configuration a lot cleaner. My
+          <a
+            href="https://github.com/arvingarciabtw/the-odin-project/tree/main/full-stack-javascript/fsj-02-javascript/11-to-do-list"
+            target="_blank"
+            rel="noopener noreferrer"
+            >to-do list</a
+          >
+          project uses this configuration setup.
+        </p>
+        <p>
+          By this point, it is important to know about good principles around
+          the object oriented programming (OOP) paradigm since I've been using
+          objects and classes a lot. This
+          <a
+            href="https://www.youtube.com/playlist?list=PLZlA0Gpn_vH9kocFX7R7BAe_CvvOCO_p9"
+            target="_blank"
+            rel="noopener noreferrer"
+            >video series</a
+          >
+          by Web Dev Simplified is a fantastic and concise resource covering the
+          SOLID design principles. I'd say the code quality in my projects
+          currently are far from perfect, but I do plan on working on improving
+          it for each and every project I work on.
+        </p>
+        <p>
+          Another useful concept explored is linting. Admittedly, I didn't set
+          up a linter and a formatter for the next project (which I'll get to
+          later) because I use a Neovim distribution called
+          <a
+            href="https://www.lazyvim.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LazyVim</a
+          >
+          that comes with a built-in linter and formatter on save. However, just
+          to avoid confusion with other learners when I share my projects, I've
+          decided to implement
+          <a
+            href="https://eslint.org/docs/latest/use/getting-started"
+            target="_blank"
+            rel="noopener noreferrer"
+            >ESLint</a
+          >
+          and
+          <a
+            href="https://prettier.io/docs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Prettier</a
+          >
+          configs for future projects.
+        </p>
+        <p>
+          And now, let's talk about asynchronous functions in JavaScript.
+          Basically, these are functions that happen in the background while the
+          rest of the code executes. This is particularly useful for fetching
+          data from a server to display on a site, just like what I did here in
+          my
+          <a
+            href="https://github.com/arvingarciabtw/the-odin-project/tree/main/full-stack-javascript/fsj-02-javascript/12-weather-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            >weather app</a
+          >
+          project.
+        </p>
+        <p>
+          The concept that makes asynchronous JavaScript possible is the
+          <code>Promise</code> object. This
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+            target="_blank"
+            rel="noopener noreferrer"
+            >article</a
+          >
+          from MDN web docs talks about the <code>Promise</code> object and its
+          syntax. While you can use this syntax to do stuff like fetching data
+          from a server, the use of the <code>async</code> and
+          <code>await</code> keywords are much more readable and intuitive. This
+          <a
+            href="https://javascript.info/async-await"
+            target="_blank"
+            rel="noopener noreferrer"
+            >article</a
+          >
+          explains it pretty clearly.
+        </p>
+        <p>
+          On another note, I also want to talk a bit about AI use (not this
+          again...). At the end of this
+          <a
+            href="https://blog.arvinagarcia.com/articles/01.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >article</a
+          >, I mentioned how I used AI to guide me through discovering a
+          solution to a problem. While this is fine, I've realized that it would
+          be a lot better in the long run if I could form those questions myself
+          anyways. If I can't figure out the right questions to ask myself on
+          what is going wrong with my application, then clearly there is
+          something I don't understand about the flow of my program. I need to
+          have the skill of understanding the problem myself, without having to
+          ask AI to guide me.
+        </p>
+        <p>
+          And when I do decide that I'm quite stuck, I should instead be asking
+          for help from the community on Discord, instead of AI. Doing so would
+          not just help me understand or solve my problem, but also build the
+          skill of asking the right questions. It also fosters my skill of how
+          to communicate properly with other developers, and how to take their
+          advice to heart. It's a bit embarrassing saying all this now, because
+          this was pretty much all said in the beginning of the curriculum. Well
+          anyways, it's time to ban myself from using AI. For real this time.
+        </p>
+        <p>
+          And that's about it. Next week will be quite the challenge, since I'm
+          expecting to be doing the battleship project. In the first time I was
+          doing The Odin Project, this was where I stopped. I hope to overcome
+          this hurdle this time around.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <div class="container-social-media">
+        <a
+          href="https://www.linkedin.com/in/arvin-garcia/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-linkedin"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://github.com/arvingarciabtw/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-github"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://x.com/arvingarciabtw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-twitter-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://bsky.app/profile/arvingarciabtw.bsky.social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bluesky"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948"
+            />
+          </svg>
+        </a>
+      </div>
+      <p class="made-by">
+        Made by
+        <a
+          class="author"
+          href="https://github.com/arvingarciabtw"
+          target="_blank"
+          rel="noopener noreferrer"
+          >@arvingarciabtw</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
