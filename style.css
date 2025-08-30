@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Geist";
+  src: url("./public/fonts/Geist/webfonts/Geist-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Geist-SemiBold";
+  src: url("./public/fonts/Geist/webfonts/Geist-SemiBold.woff2");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("./public/fonts/Instrument Serif/InstrumentSerif-Regular.woff2");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +25,13 @@
 }
 
 :root {
-  --darkest-black: #0c0d11;
+  --darkest-black: #121212;
   --darker-gray: #131417;
   --green: #c6fbbb;
   --gray: #979797;
   --dark-gray: #606060;
   --light-gray: #b2b2b2;
+  --white: #faf9f6;
 }
 
 body {
@@ -25,7 +41,7 @@ body {
   margin: 0 auto;
   max-width: 600px;
   font-family: "Geist", sans-serif;
-  color: white;
+  color: var(--white);
   background-color: var(--darkest-black);
 }
 
@@ -135,7 +151,7 @@ section h1 {
 
 .articles-list li a:hover .article-title,
 .articles-list li a:hover .article-date {
-  color: white;
+  color: var(--white);
 }
 
 .container-articles p {
@@ -144,7 +160,7 @@ section h1 {
 
 .year {
   color: var(--green);
-  font-weight: 700;
+  font-family: "Geist-SemiBold", sans-serif;
 }
 
 .article-title {
@@ -221,7 +237,7 @@ footer {
 }
 
 .container-social-media svg:hover {
-  fill: white;
+  fill: var(--white);
 }
 
 .made-by {
@@ -236,7 +252,7 @@ footer {
 }
 
 .author:hover {
-  color: white;
+  color: var(--white);
 }
 
 /* --- menu.html --- */
@@ -258,7 +274,7 @@ footer {
 }
 
 .menu-subcontainer ul a {
-  color: white;
+  color: var(--white);
 }
 
 .menu-subcontainer ul a li {
@@ -293,14 +309,14 @@ article p {
   margin-bottom: 0.5rem;
   font-size: 2.75rem;
   font-family: "Instrument Serif", serif;
-  color: white;
+  color: var(--white);
   width: 100%;
   line-height: 3rem;
 }
 
 .container-title .article-date {
   color: var(--green);
-  font-weight: 700;
+  font-family: "Geist-SemiBold", sans-serif;
 }
 
 article p a {
