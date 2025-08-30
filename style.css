@@ -95,7 +95,14 @@ main {
   flex: 1;
 }
 
-h1 {
+h1,
+section h1 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+:where(h1) {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2rem;
