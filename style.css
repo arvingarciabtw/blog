@@ -165,6 +165,7 @@ section h1 {
 
 .article-title {
   width: 75%;
+  line-height: 1.5;
 }
 
 hr {
@@ -295,10 +296,21 @@ article {
   gap: 1.5rem;
 }
 
-article p {
+article p,
+article blockquote,
+article ol {
   font-size: 0.875rem;
   color: var(--light-gray);
   line-height: 1.5rem;
+}
+
+article blockquote,
+article ol {
+  font-style: italic;
+}
+
+article ol {
+  margin-left: 1rem;
 }
 
 .container-title {
