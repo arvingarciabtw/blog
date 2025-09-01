@@ -1,15 +1,18 @@
 @font-face {
   font-family: "Geist";
+  font-display: fallback;
   src: url("./public/fonts/Geist/webfonts/Geist-Regular.woff2");
 }
 
 @font-face {
   font-family: "Geist-SemiBold";
+  font-display: fallback;
   src: url("./public/fonts/Geist/webfonts/Geist-SemiBold.woff2");
 }
 
 @font-face {
   font-family: "Instrument Serif";
+  font-display: fallback;
   src: url("./public/fonts/Instrument Serif/InstrumentSerif-Regular.woff2");
 }
 
