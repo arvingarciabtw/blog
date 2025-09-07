@@ -325,11 +325,11 @@ article ol {
 
 .container-title .article-title {
   margin-bottom: 0.5rem;
-  font-size: 2.75rem;
+  font-size: 2.25rem;
   font-family: "Instrument Serif", serif;
   color: var(--white);
   width: 100%;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 
 .container-title .article-date {
