@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next Regular';
+  src: url('../assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next Bold';
+  src: url('../assets/fonts/AtkinsonHyperlegibleNext-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Mono Regular';
+  src: url('../assets/fonts/AtkinsonHyperlegibleMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Mono Bold';
+  src: url('../assets/fonts/AtkinsonHyperlegibleMono-Bold.ttf');
+}
+
+:root {
+  --bg: #121212;
+  --fg: #faf9f6;
+  --accent: #c6fbbb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Atkinson Hyperlegible Next Regular';
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
