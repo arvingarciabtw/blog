@@ -18,16 +18,24 @@
   src: url('../assets/fonts/AtkinsonHyperlegibleMono-Bold.ttf');
 }
 
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../assets/fonts/JetBrainsMono-Regular.ttf');
+}
+
 :root {
   --bg: #121212;
   --fg: #faf9f6;
   --accent: #c6fbbb;
+  --gray: #979797;
+  --dark-gray: #606060;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.5;
   font-family: 'Atkinson Hyperlegible Next Regular';
 }
 
@@ -48,5 +56,9 @@ body {
 }
 
 main {
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 800px;
   flex: 1;
 }
