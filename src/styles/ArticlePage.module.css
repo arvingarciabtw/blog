@@ -1,0 +1,17 @@
+.date {
+  font-family: 'JetBrains Mono';
+  font-size: 0.875rem;
+}
+
+.containerArticleContent {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  color: var(--light-gray);
+}
+
+.containerArticleContent a {
+  color: var(--accent);
+}

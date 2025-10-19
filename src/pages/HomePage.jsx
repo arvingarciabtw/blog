@@ -1,8 +1,11 @@
 import styles from '../styles/HomePage.module.css';
+import { Link } from 'react-router';
 import NavBar from '../components/NavBar';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
-import { Link } from 'react-router';
+import data from '../data';
+
+const blogs = data.reverse();
 
 function ArticlesSection({ year, children }) {
   return (
@@ -13,9 +16,9 @@ function ArticlesSection({ year, children }) {
   );
 }
 
-function ArticleLink({ title, date }) {
+function ArticleLink({ title, date, id }) {
   return (
-    <Link to="/:id" className={styles.containerArticleLink}>
+    <Link to={`/${id}`} className={styles.containerArticleLink}>
       <p className={styles.title}>{title}</p>
       <p className={styles.date}>{date}</p>
     </Link>
@@ -33,14 +36,14 @@ function HomePage() {
           you can see my learnings throughout my journey.
         </p>
         <ArticlesSection year="2025">
-          <ArticleLink title="React: State and Rendering" date="OCT 12" />
-          <ArticleLink title="React: The Basics" date="SEP 14" />
-          <ArticleLink title="Advanced HTML and CSS" date="SEP 07" />
-          <ArticleLink title="Test Driven Development" date="AUG 31" />
-          <ArticleLink title="JavaScript: The Halfway Point" date="AUG 24" />
-          <ArticleLink title="Intermediate HTML and CSS" date="AUG 17" />
-          <ArticleLink title="Web Development Foundations" date="AUG 10" />
-          <ArticleLink title="Back to Square One" date="AUG 02" />
+          {blogs.map((blog) => (
+            <ArticleLink
+              id={blog.id}
+              key={blog.id}
+              title={blog.title}
+              date={blog.date}
+            />
+          ))}
         </ArticlesSection>
       </Content>
       <Footer />
