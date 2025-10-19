@@ -10,7 +10,7 @@ const blogs = data.reverse();
 function ArticlesSection({ year, children }) {
   return (
     <section className={styles.sectionArticles}>
-      <h3 className={styles.year}>{year}</h3>
+      <h2 className={styles.year}>{year}</h2>
       <div className={styles.containerArticleLinks}>{children}</div>
     </section>
   );
