@@ -6,6 +6,7 @@ import Article5 from './components/articles/Article5';
 import Article6 from './components/articles/Article6';
 import Article7 from './components/articles/Article7';
 import Article8 from './components/articles/Article8';
+import Article9 from './components/articles/Article9';
 
 const blogs = [
   {
@@ -63,6 +64,13 @@ const blogs = [
     title: 'React: State and Rendering',
     date: 'OCT 12',
     content: <Article8 />,
+  },
+  {
+    id: '9',
+    url: 'client-side-routing-with-react-router',
+    title: 'Client-side Routing with React Router',
+    date: 'OCT 19',
+    content: <Article9 />,
   },
 ];
 

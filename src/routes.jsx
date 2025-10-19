@@ -3,7 +3,7 @@ import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 import ArticlePage from './pages/ArticlePage';
 
-const router = [
+const routes = [
   {
     path: '/',
     element: <App />,
@@ -15,4 +15,4 @@ const router = [
   },
 ];
 
-export default router;
+export default routes;
