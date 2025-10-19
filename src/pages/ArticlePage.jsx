@@ -10,7 +10,12 @@ function ArticlePage() {
   const blog = blogs.find((b) => b.url === url);
 
   if (!blog) {
-    return <h1>Blog not found.</h1>;
+    return (
+      <div className={styles.notFound}>
+        <h1>Oops!</h1>
+        <p>Blog not found.</p>
+      </div>
+    );
   }
 
   return (
