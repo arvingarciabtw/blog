@@ -31,10 +31,10 @@ function Article3() {
         </a>{' '}
         is basically a tool that allows you to write HTML a lot quicker by using
         syntax from CSS selectors. Perhaps the most useful (and arguably most
-        used) Emmet feature is typing<code>!</code>and pressing
+        used) Emmet feature is typing <code>!</code> and pressing{' '}
         <code>Enter</code>, which automatically generates HTML boilerplate for
-        you. However, I do also add another<code>meta</code>tag with
-        <code>name="description"</code>to add a description for my websites.
+        you. However, I do also add another <code>meta</code> tag with{' '}
+        <code>name="description"</code> to add a description for my websites.
       </p>
       <p>
         I would absolutely love to use SVGs (animated SVGs in particular) more
@@ -52,7 +52,7 @@ function Article3() {
       </p>
       <p>
         As for the intermediate CSS concepts, a ton was covered. Pretty much
-        everything mentioned there was very useful. CSS units (<code>rem</code>
+        everything mentioned there was very useful. CSS units (<code>rem</code>{' '}
         is great!), resets (I use{' '}
         <a
           href="https://www.joshwcomeau.com/css/custom-css-reset/"
@@ -68,13 +68,12 @@ function Article3() {
       </p>
       <p>
         The concepts I've applied the most in my projects are using proper
-        units, selectors, and custom properties. I now use
-        <code>rem</code>instead of<code>px</code>for font sizes, margins, and
-        paddings. Although,<code>px</code>still has its place for setting widths
-        and heights on elements. Selectors like
-        <code>&gt;</code>I use a lot more in my CSS now. As for custom
-        properties, I use them for setting the color scheme of my project (e.g.
-        <code>--c-red: #ff0000;</code>).
+        units, selectors, and custom properties. I now use <code>rem</code>{' '}
+        instead of <code>px</code> for font sizes, margins, and paddings.
+        Although, <code>px</code> still has its place for setting widths and
+        heights on elements. Selectors like <code>&gt;</code> I use a lot more
+        in my CSS now. As for custom properties, I use them for setting the
+        color scheme of my project (e.g. <code>--c-red: #ff0000;</code>).
       </p>
       <p>
         And while we're on the topic of units, this{' '}
@@ -85,9 +84,9 @@ function Article3() {
         >
           video
         </a>{' '}
-        by Kevin Powell on<code>rem</code>vs<code>em</code>is quite eye-opening.
-        It is because of this video that I use
-        <code>em</code>for buttons!
+        by Kevin Powell on <code>rem</code> vs <code>em</code> is quite
+        eye-opening. It is because of this video that I use <code>em</code> for
+        buttons!
       </p>
       <p>
         Now, let's talk about forms. On the surface, you'd think forms would be

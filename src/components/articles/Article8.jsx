@@ -53,7 +53,7 @@ function Article8() {
         After rendering or calling your components, React will modify the DOM.
         However, DOM nodes will only change if there's a difference between
         renders. On initial render, all of the DOM nodes React created will be
-        put on the screen using the<code>appendChild()</code>DOM API. For
+        put on the screen using the <code>appendChild()</code> DOM API. For
         re-renders, React will do the minimal operations needed to make the DOM
         match the latest rendering output.
       </p>
@@ -71,11 +71,11 @@ function Article8() {
       <p>
         Alright, so we need something to hold our state, but we also need
         something to update that state. This is where we can use the{' '}
-        <code>useState</code>hook. Put simply, a hook is a special function that
-        allows developers to use state and other React features.
+        <code>useState</code> hook. Put simply, a hook is a special function
+        that allows developers to use state and other React features.
       </p>
       <p>
-        This<code>useState</code>hook provides us two things: (1) a{' '}
+        This <code>useState</code> hook provides us two things: (1) a{' '}
         <em>state variable</em> that holds our state, which retains data between
         renders and (2) a <em>state setter function</em> that updates the state
         variable (which again, will trigger a re-render since the state is
@@ -83,40 +83,40 @@ function Article8() {
       </p>
       <p>The syntax for it looks like this:</p>
       <pre>{`
-  import { useState } from "react"
+import { useState } from "react"
 
-  const [number, setNumber] = useState(0)
+const [number, setNumber] = useState(0)
         `}</pre>
       <p>
-        We import the<code>useState</code>hook with a named import. Then, we
-        have a state variable called<code>number</code>, and a state setter
-        function called<code>setNumber</code>. The argument that we pass in the{' '}
-        <code>useState</code>hook will be the value of the state variable on
+        We import the <code>useState</code> hook with a named import. Then, we
+        have a state variable called <code>number</code>, and a state setter
+        function called <code>setNumber</code>. The argument that we pass in the{' '}
+        <code>useState</code> hook will be the value of the state variable on
         initial render. So, in this example, it just means that our{' '}
-        <code>number</code>state variable has a value of 0 on initial render.
+        <code>number</code> state variable has a value of 0 on initial render.
       </p>
       <p>To use our state setter function, we could do something like this:</p>
       <pre>{`
-  function click() {
-    setNumber(number + 1);
-  }
+function click() {
+  setNumber(number + 1);
+}
         `}</pre>
       <p>
-        This just means that whenever our<code>click()</code>function is called,
-        we will update our
-        <code>number</code>state variable, incrementing it by 1. Since our state
-        got updated, the component that holds this state will re-render.
+        This just means that whenever our <code>click()</code> function is
+        called, we will update our <code>number</code> state variable,
+        incrementing it by 1. Since our state got updated, the component that
+        holds this state will re-render.
       </p>
       <p>
         Put simply, that's basically how state works! But, it can get quite
         complicated. For example:
       </p>
       <pre>{`
-  function click() {
-    setNumber(number + 1);
-    setNumber(number + 1);
-    setNumber(number + 1);
-  }
+function click() {
+  setNumber(number + 1);
+  setNumber(number + 1);
+  setNumber(number + 1);
+}
         `}</pre>
       <p>
         At first glance, it seems that when this function is called, we update

@@ -37,23 +37,23 @@ function Article7() {
         applications.
       </p>
       <p>
-        To scaffold a Vite project, just type and execute
-        <code>npm create vite@latest</code>in the terminal and follow the
+        To scaffold a Vite project, just type and execute{' '}
+        <code>npm create vite@latest</code> in the terminal and follow the
         prompts. The project name and the template can also be specified with
         additional command line options. For example:
       </p>
       <p>
-        The command
-        <code>npm create vite@latest my-react-app -- --template react</code>
+        The command{' '}
+        <code>npm create vite@latest my-react-app -- --template react</code>{' '}
         would scaffold a Vite + React project.
       </p>
       <p>
         Now, let's talk about React components. Components are simply
         independent reusable chunks that make up a user interface. So, you could
-        have something like: an<code>App</code>component that represents the
-        main application,<code>NavBar</code>which is the navigation bar,
-        <code>MainContent</code>which contains the main content, and
-        <code>Footer</code>which will be the footer.
+        have something like: an <code>App</code> component that represents the
+        main application,<code>NavBar</code> which is the navigation bar,{' '}
+        <code>MainContent</code> which contains the main content, and{' '}
+        <code>Footer</code> which will be the footer.
       </p>
       <p>
         React components are just JavaScript functions. It's important to
@@ -61,9 +61,9 @@ function Article7() {
         a component would look like this:
       </p>
       <pre>{`
-  function Footer() {
-    return <p>This is a footer</p>;
-  }
+function Footer() {
+  return <p>This is a footer</p>;
+}
         `}</pre>
       <p>
         If the component was not capitalized, it would not work as expected.
@@ -99,9 +99,9 @@ function Article7() {
       <p>
         Sometimes, we'd want components to display different things depending on
         different conditions. We can conditionally render JSX using JavaScript
-        syntax like<code>if</code>statements,
-        <code>&amp;&amp;</code>, and<code>? :</code>operators. I don't want to
-        make this article too long so I won't go into detail on those, but this{' '}
+        syntax like <code>if</code> statements, <code>&amp;&amp;</code>, and{' '}
+        <code>? :</code> operators. I don't want to make this article too long
+        so I won't go into detail on those, but this{' '}
         <a
           href="https://react.dev/learn/conditional-rendering"
           target="_blank"
@@ -122,9 +122,9 @@ function Article7() {
         >
           article
         </a>{' '}
-        from the React documentation goes over how to use
-        <code>filter()</code>and<code>map()</code>to filter and transform an
-        array of data into an array of components.
+        from the React documentation goes over how to use <code>filter()</code>{' '}
+        and <code>map()</code> to filter and transform an array of data into an
+        array of components.
       </p>
       <p>
         That's about it for now. I'll talk more about state once I've finished

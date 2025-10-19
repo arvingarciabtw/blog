@@ -134,10 +134,10 @@ function Article2() {
         </a>
         ! It was honestly quite nice having a refresher on HTML boilerplate
         code, especially on the <code>charset</code> attribute of the meta tag
-        as well as the
+        as well as the{' '}
         <code>
           name="viewport" content="width=device-width,initial-scale=1.0"
-        </code>
+        </code>{' '}
         to keep the site responsive.
       </p>
       <p>
@@ -178,7 +178,7 @@ function Article2() {
           CSS
         </a>{' '}
         (Cascading Style Sheets). Most notably, flexbox. Admittedly, I didn't
-        fully understand <code>flex-grow</code>, <code>flex-shrink</code>, and
+        fully understand <code>flex-grow</code>, <code>flex-shrink</code>, and{' '}
         <code>flex-basis</code> before. But now, I understand it a lot more and
         can actually put <code>flex-grow</code> to good use now. Also, this{' '}
         <a

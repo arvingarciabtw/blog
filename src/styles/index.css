@@ -77,13 +77,15 @@ code {
 
 pre {
   box-sizing: content-box;
-  padding: 0.25rem;
+  padding: 0.25rem 1.25rem;
 
   background-color: var(--bg-alt);
   color: var(--fg);
   border-radius: 6px;
   font-family: 'JetBrains Mono';
   font-size: 0.825rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 ol {

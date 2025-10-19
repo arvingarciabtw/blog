@@ -61,23 +61,23 @@ function Article5() {
         introduced.
       </p>
       <p>
-        Apart from the typical<code>git commit</code>, you can also do
+        Apart from the typical <code>git commit</code>, you can also do{' '}
         <code>git commit --amend</code>. This replaces our last commit with our
         new commit. It is important to remember though to <em>only</em> amend
         commits that have <em>not</em> been pushed anywhere.
       </p>
       <p>
-        The command<code>git rebase</code>integrates changes from one branch to
-        another by moving commits to the latest point of the target branch. On
-        the other hand,<code>squash</code>combines multiple commits into one.
-        Then, we have<code>git reset</code>that moves your current branch to a
-        different commit.
+        The command <code>git rebase</code> integrates changes from one branch
+        to another by moving commits to the latest point of the target branch.
+        On the other hand, <code>squash</code> combines multiple commits into
+        one. Then, we have <code>git reset</code> that moves your current branch
+        to a different commit.
       </p>
       <p>
         Though I have to admit, I haven't used these commands in the projects
-        that I've done. The trifecta of<code>add</code>,<code>commit</code>, and
-        <code>push</code>has served me well for my projects so far. But if I
-        ever do goof up something, I can always refer to those other commands
+        that I've done. The trifecta of <code>add</code>, <code>commit</code>,
+        and <code>push</code> has served me well for my projects so far. But if
+        I ever do goof up something, I can always refer to those other commands
         I've mentioned.
       </p>
       <p>

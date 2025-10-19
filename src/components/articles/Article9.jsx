@@ -67,28 +67,28 @@ function Article9() {
         in The Odin Project:
       </p>
       <pre>{`
-  import { StrictMode } from "react";
-  import { createRoot } from "react-dom/client";
-  import { createBrowserRouter, RouterProvider } from "react-router";
-  import App from "./App";
-  import Profile from "./Profile";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import App from "./App";
+import Profile from "./Profile";
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <App />,
-    },
-    {
-      path: "profile",
-      element: <Profile />,
-    },
-  ]);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "profile",
+    element: <Profile />,
+  },
+]);
 
-  createRoot(document.getElementById("root")).render(
-    <StrictMode>
-      <RouterProvider router={router} />
-    </StrictMode>
-  );
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
+);
       `}</pre>
       <p>
         The <code>createBrowserRouter</code> and <code>RouterProvider</code> are
@@ -111,25 +111,25 @@ function Article9() {
         regular <code>a</code> tag. It would look something like this:
       </p>
       <pre>{`
-  import { Link } from "react-router";
+import { Link } from "react-router";
 
-  const App = () => {
-    return (
-      <div>
-        <h1>Hello from the main page of the app!</h1>
-        <p>Here are some examples of links to other pages</p>
-        <nav>
-          <ul>
-            <li>
-              <Link to="profile">Profile page</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    );
-  };
+const App = () => {
+  return (
+    <div>
+      <h1>Hello from the main page of the app!</h1>
+      <p>Here are some examples of links to other pages</p>
+      <nav>
+        <ul>
+          <li>
+            <Link to="profile">Profile page</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
-  export default App;
+export default App;
       `}</pre>
       <p>
         React Router has another useful custom element called{' '}
@@ -138,29 +138,29 @@ function Article9() {
         look at an example, taken from the source code of this blog!
       </p>
       <pre>{`  
-  // These are my routes, located in another file
-  const routes = [
-    {
-      path: '/',
-      element: <App />,
-      errorElement: <ErrorPage />,
-      children: [
-        { index: true, element: <HomePage /> },
-        { path: '/:url', element: <ArticlePage /> },
-      ],
-    },
-  ];
+// These are my routes, located in another file
+const routes = [
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: '/:url', element: <ArticlePage /> },
+    ],
+  },
+];
 
-  // App.jsx
-  import { Outlet } from 'react-router';
+// App.jsx
+import { Outlet } from 'react-router';
 
-  function App() {
-    return (
-      <>
-        <Outlet />
-      </>
-    );
-  }
+function App() {
+  return (
+    <>
+      <Outlet />
+    </>
+  );
+}
       `}</pre>
       <p>
         So, in our route, we introduced a new property called{' '}

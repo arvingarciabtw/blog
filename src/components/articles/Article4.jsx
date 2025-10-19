@@ -38,7 +38,7 @@ function Article4() {
       <p>
         A simple way to organize code is by using objects to group things.
         Typically, the best way to define objects is using the object literal
-        syntax, which looks like this:
+        syntax, which looks like this:{' '}
         <code>{`const anObject = { key: value };`}</code>. Then, when we want an
         object that will be duplicated, we can use an object constructor which
         is essentially just a function that has the first letter uppercased by
@@ -54,7 +54,7 @@ function Article4() {
       </p>
       <p>
         Moving forward, factory functions and the module pattern was explored.
-        Previously, with an object constructor, you'd need to use the
+        Previously, with an object constructor, you'd need to use the{' '}
         <code>new</code> keyword to create an object. But, with factory
         functions, you set up and <em>return the new object</em> when you invoke
         the function. My{' '}
@@ -68,10 +68,10 @@ function Article4() {
         project uses this concept. An example of a factory function:
       </p>
       <pre>{`
-  function createPerson(name) {
-    const username = "@" + name;
-    return { name, username } // As you can see, we return an object
-  }
+function createPerson(name) {
+  const username = "@" + name;
+  return { name, username } // As you can see, we return an object
+}
         `}</pre>
       <p>
         Typically, a factory function is used to make multiple objects. But,
@@ -96,18 +96,18 @@ function Article4() {
         in The Odin Project.
       </p>
       <pre>{`
-  const calculator = (function () {
-    const add = (a, b) => a + b;
-    const sub = (a, b) => a - b;
-    const mul = (a, b) => a * b;
-    const div = (a, b) => a / b;
-    return { add, sub, mul, div };
-    })();
+const calculator = (function () {
+  const add = (a, b) => a + b;
+  const sub = (a, b) => a - b;
+  const mul = (a, b) => a * b;
+  const div = (a, b) => a / b;
+  return { add, sub, mul, div };
+  })();
 
-    calculator.add(3,5); // 8
-    calculator.sub(6,2); // 4
-    calculator.mul(14,5534); // 77476
-  }
+  calculator.add(3,5); // 8
+  calculator.sub(6,2); // 4
+  calculator.mul(14,5534); // 77476
+}
         `}</pre>
       <p>
         But personally, I prefer classes much more than factory functions. You
@@ -179,7 +179,7 @@ function Article4() {
         >
           documentation
         </a>{' '}
-        for this helps greatly, and you can even use a utility called
+        for this helps greatly, and you can even use a utility called{' '}
         <code>webpack-merge</code> to make the configuration a lot cleaner. My{' '}
         <a
           href="https://github.com/arvingarciabtw/the-odin-project/tree/main/full-stack-javascript/fsj-02-javascript/11-to-do-list"
@@ -252,7 +252,7 @@ function Article4() {
         project.
       </p>
       <p>
-        The concept that makes asynchronous JavaScript possible is the
+        The concept that makes asynchronous JavaScript possible is the{' '}
         <code>Promise</code> object. This{' '}
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
@@ -263,8 +263,8 @@ function Article4() {
         </a>{' '}
         from MDN web docs talks about the <code>Promise</code> object and its
         syntax. While you can use this syntax to do stuff like fetching data
-        from a server, the use of the <code>async</code> and
-        <code>await</code> keywords are much more readable and intuitive. This{' '}
+        from a server, the use of the <code>async</code> and <code>await</code>{' '}
+        keywords are much more readable and intuitive. This{' '}
         <a
           href="https://javascript.info/async-await"
           target="_blank"
