@@ -25,6 +25,7 @@
 
 :root {
   --bg: #121212;
+  --bg-alt: #1e1e1e;
   --fg: #faf9f6;
   --accent: #c6fbbb;
   --gray: #979797;
@@ -62,4 +63,30 @@ main {
   width: 100%;
   max-width: 800px;
   flex: 1;
+}
+
+code {
+  margin: 0 0.5rem;
+  padding: 0.15em 0.5em;
+  border-radius: 6px;
+  background-color: var(--bg-alt);
+  color: var(--accent);
+  font-family: 'JetBrains Mono';
+  font-size: 0.75rem;
+  line-height: 1.75;
+}
+
+pre {
+  box-sizing: content-box;
+  padding: 0.25rem;
+
+  background-color: var(--bg-alt);
+  color: var(--fg);
+  border-radius: 6px;
+  font-family: 'JetBrains Mono';
+  font-size: 0.825rem;
+}
+
+ol {
+  margin-left: 1.5rem;
 }

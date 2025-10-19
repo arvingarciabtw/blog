@@ -16,9 +16,9 @@ function ArticlesSection({ year, children }) {
   );
 }
 
-function ArticleLink({ title, date, id }) {
+function ArticleLink({ title, date, url }) {
   return (
-    <Link to={`/${id}`} className={styles.containerArticleLink}>
+    <Link to={`/${url}`} className={styles.containerArticleLink}>
       <p className={styles.title}>{title}</p>
       <p className={styles.date}>{date}</p>
     </Link>
@@ -38,8 +38,8 @@ function HomePage() {
         <ArticlesSection year="2025">
           {blogs.map((blog) => (
             <ArticleLink
-              id={blog.id}
               key={blog.id}
+              url={blog.url}
               title={blog.title}
               date={blog.date}
             />

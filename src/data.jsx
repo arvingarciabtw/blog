@@ -1,81 +1,68 @@
 import Article1 from './components/articles/Article1';
+import Article2 from './components/articles/Article2';
+import Article3 from './components/articles/Article3';
+import Article4 from './components/articles/Article4';
+import Article5 from './components/articles/Article5';
+import Article6 from './components/articles/Article6';
+import Article7 from './components/articles/Article7';
+import Article8 from './components/articles/Article8';
 
 const blogs = [
   {
     id: '1',
+    url: 'back-to-square-one',
     title: 'Back to Square One',
     date: 'AUG 02',
     content: <Article1 />,
   },
   {
     id: '2',
+    url: 'web-development-foundations',
     title: 'Web Development Foundations',
     date: 'AUG 10',
-    content: `
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-    `,
+    content: <Article2 />,
   },
   {
     id: '3',
+    url: 'intermediate-html-and-css',
     title: 'Intermediate HTML and CSS',
     date: 'AUG 17',
-    content: `
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-    `,
+    content: <Article3 />,
   },
   {
     id: '4',
+    url: 'javascript-the-halfway-point',
     title: 'JavaScript: The Halfway Point',
     date: 'AUG 24',
-    content: `
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-    `,
+    content: <Article4 />,
   },
   {
     id: '5',
+    url: 'test-driven-development',
     title: 'Test Driven Development',
     date: 'AUG 31',
-    content: `
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-    `,
+    content: <Article5 />,
   },
   {
     id: '6',
+    url: 'advanced-html-and-css',
     title: 'Advanced HTML and CSS',
     date: 'SEP 07',
-    content: `
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-    `,
+    content: <Article6 />,
   },
   {
     id: '7',
+    url: 'react-the-basics',
     title: 'React: The Basics',
     date: 'SEP 14',
-    content: `
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-    `,
+    content: <Article7 />,
   },
   {
     id: '8',
+    url: 'react-state-and-rendering',
     title: 'React: State and Rendering',
     date: 'OCT 12',
-    content: `
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
-    `,
+    content: <Article8 />,
   },
 ];
 

@@ -10,7 +10,7 @@ const router = [
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: '/:id', element: <ArticlePage /> },
+      { path: '/:url', element: <ArticlePage /> },
     ],
   },
 ];

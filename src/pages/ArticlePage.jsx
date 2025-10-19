@@ -6,8 +6,8 @@ import Footer from '../components/Footer';
 import blogs from '../data';
 
 function ArticlePage() {
-  const { id } = useParams();
-  const blog = blogs.find((b) => b.id === id);
+  const { url } = useParams();
+  const blog = blogs.find((b) => b.url === url);
 
   if (!blog) {
     return <h1>Blog not found.</h1>;
@@ -18,7 +18,7 @@ function ArticlePage() {
       <NavBar />
       <Content>
         <article>
-          <h1>{blog.title}</h1>
+          <h1 className={styles.title}>{blog.title}</h1>
           <p className={styles.date}>{blog.date}</p>
           <div className={styles.containerArticleContent}>{blog.content}</div>
         </article>
