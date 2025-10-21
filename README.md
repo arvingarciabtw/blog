@@ -15,4 +15,4 @@
 
 ## 🚀 Live Site
 
-The live site can be viewed [here](https://nexus-tech-shop.vercel.app).
+The live site can be viewed [here](https://blog.arvingarcia.com/).
