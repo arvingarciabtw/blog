@@ -4,21 +4,6 @@
 }
 
 @font-face {
-  font-family: 'Atkinson Hyperlegible Next Bold';
-  src: url('../assets/fonts/AtkinsonHyperlegibleNext-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Atkinson Hyperlegible Mono Regular';
-  src: url('../assets/fonts/AtkinsonHyperlegibleMono-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Atkinson Hyperlegible Mono Bold';
-  src: url('../assets/fonts/AtkinsonHyperlegibleMono-Bold.ttf');
-}
-
-@font-face {
   font-family: 'JetBrains Mono';
   src: url('../assets/fonts/JetBrainsMono-Regular.ttf');
 }
@@ -39,6 +24,7 @@
   box-sizing: border-box;
   line-height: 1.5;
   font-family: 'Atkinson Hyperlegible Next Regular';
+  font-display: swap;
 }
 
 body {
