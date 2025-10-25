@@ -24,9 +24,8 @@
 
 .containerArticleLink {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
 
   color: var(--gray);
   text-decoration: none;
@@ -39,11 +38,11 @@
 }
 
 .containerArticleLink > .title {
-  max-width: 70%;
+  max-width: 75%;
 }
 
 .containerArticleLink > .date {
+  margin-top: 0.125rem;
   font-family: 'JetBrains Mono';
   font-size: 0.875rem;
-  align-self: baseline;
 }
