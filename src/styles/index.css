@@ -92,3 +92,9 @@ pre {
 ol {
   margin-left: 1.5rem;
 }
+
+blockquote {
+  padding-left: 1rem;
+  font-style: italic;
+  border-left: 4px solid var(--dark-gray);
+}

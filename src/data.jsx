@@ -8,6 +8,7 @@ import Article7 from './components/articles/Article7';
 import Article8 from './components/articles/Article8';
 import Article9 from './components/articles/Article9';
 import Article10 from './components/articles/Article10';
+import Article11 from './components/articles/Article11';
 
 const blogs = [
   {
@@ -79,6 +80,13 @@ const blogs = [
     title: 'Learning SQL',
     date: 'OCT 26',
     content: <Article10 />,
+  },
+  {
+    id: '11',
+    url: 'what-is-nodejs',
+    title: 'What is Node.js?',
+    date: 'NOV 02',
+    content: <Article11 />,
   },
 ];
 
