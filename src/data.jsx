@@ -10,6 +10,7 @@ import Article9 from './components/articles/Article9';
 import Article10 from './components/articles/Article10';
 import Article11 from './components/articles/Article11';
 import Article12 from './components/articles/Article12';
+import Article13 from './components/articles/Article13';
 
 const blogs = [
   {
@@ -95,6 +96,13 @@ const blogs = [
     title: 'Express.js: Building Web Servers',
     date: 'NOV 09',
     content: <Article12 />,
+  },
+  {
+    id: '13',
+    url: 'authentication-with-passportjs',
+    title: 'Authentication with Passport.js',
+    date: 'NOV 16',
+    content: <Article13 />,
   },
 ];
 
