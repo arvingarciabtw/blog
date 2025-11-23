@@ -11,6 +11,7 @@ import Article10 from './components/articles/Article10';
 import Article11 from './components/articles/Article11';
 import Article12 from './components/articles/Article12';
 import Article13 from './components/articles/Article13';
+import Article14 from './components/articles/Article14';
 
 const blogs = [
   {
@@ -103,6 +104,13 @@ const blogs = [
     title: 'Authentication with Passport.js',
     date: 'NOV 16',
     content: <Article13 />,
+  },
+  {
+    id: '14',
+    url: 'easier-queries-with-prisma-orm',
+    title: 'Easier Queries with Prisma ORM',
+    date: 'NOV 23',
+    content: <Article14 />,
   },
 ];
 
