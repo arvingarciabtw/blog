@@ -12,6 +12,7 @@ import Article11 from './components/articles/Article11';
 import Article12 from './components/articles/Article12';
 import Article13 from './components/articles/Article13';
 import Article14 from './components/articles/Article14';
+import Article15 from './components/articles/Article15';
 
 const blogs = [
   {
@@ -111,6 +112,13 @@ const blogs = [
     title: 'Easier Queries with Prisma ORM',
     date: 'NOV 23',
     content: <Article14 />,
+  },
+  {
+    id: '15',
+    url: 'typescript-javascript-with-types',
+    title: 'TypeScript: JavaScript with Types',
+    date: 'NOV 30',
+    content: <Article15 />,
   },
 ];
 
