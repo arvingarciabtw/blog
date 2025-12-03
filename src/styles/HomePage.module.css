@@ -1,5 +1,6 @@
 .heading {
   margin-bottom: 0.75rem;
+  font-weight: var(--weight-semi-bold);
 }
 
 .subheading {

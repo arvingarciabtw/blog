@@ -124,6 +124,13 @@ html {
   --color-dark-gray: oklch(0.4891 0 0);
   --color-light-gray: oklch(0.7636 0 0);
 
+  --weight-extra-light: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+  --weight-extra-bold: 800;
 }
 
 /* == SCROLLBAR == */
