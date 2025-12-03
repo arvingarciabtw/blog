@@ -24,11 +24,11 @@
   flex-direction: column;
   gap: 1.5rem;
 
-  color: var(--light-gray);
+  color: var(--color-light-gray);
 }
 
 .containerArticleContent a {
-  color: var(--accent);
+  color: var(--color-accent);
 
   transition: opacity 0.3s ease;
 }

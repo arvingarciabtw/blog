@@ -27,14 +27,14 @@
   display: grid;
   grid-template-columns: 1fr auto;
 
-  color: var(--gray);
+  color: var(--color-gray);
   text-decoration: none;
 
   transition: color 0.3s ease;
 }
 
 .containerArticleLink:hover {
-  color: var(--accent);
+  color: var(--color-accent);
 }
 
 .containerArticleLink > .title {
