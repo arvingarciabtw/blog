@@ -188,6 +188,10 @@ ol {
   margin-left: 1.5rem;
 }
 
+ul {
+  margin-left: 1rem;
+}
+
 blockquote {
   padding-left: 1rem;
   font-style: italic;
@@ -222,6 +226,6 @@ code, pre, code * {
   color: var(--color-fg);
 }
 
-p > code {
+* > code {
   color: var(--color-accent);
 }

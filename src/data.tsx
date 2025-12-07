@@ -13,6 +13,7 @@ import Article12 from "./components/articles/2025/Article12.mdx";
 import Article13 from "./components/articles/2025/Article13.mdx";
 import Article14 from "./components/articles/2025/Article14.mdx";
 import Article15 from "./components/articles/2025/Article15.mdx";
+import Article16 from "./components/articles/2025/Article16.mdx";
 
 const blogs = [
 	{
@@ -119,6 +120,13 @@ const blogs = [
 		title: "TypeScript: JavaScript with Types",
 		date: "NOV 30",
 		content: <Article15 />,
+	},
+	{
+		id: "16",
+		url: "what-is-mdx",
+		title: "What is MDX?",
+		date: "DEC 07",
+		content: <Article16 />,
 	},
 ];
 
