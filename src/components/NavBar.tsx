@@ -6,12 +6,7 @@ function NavBar() {
 		<header className={styles.headerApp}>
 			<nav>
 				<Link to="/">
-					<img
-						src="/logo_optimized.webp"
-						alt="Arvin Garcia profile picture"
-						width="36px"
-						height="36px"
-					/>
+					<div className={styles.logo}></div>
 				</Link>
 			</nav>
 		</header>

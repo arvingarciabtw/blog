@@ -4,13 +4,14 @@
   max-width: 800px;
 }
 
-.headerApp > nav img {
-  max-width: 36px;
+.logo {
+  width: 36px;
+  height: 36px;
+  background: var(--color-accent);
   border-radius: 50%;
-
   transition: opacity 0.3s ease;
 }
 
-.headerApp > nav img:hover {
+.logo:hover {
   opacity: 0.8;
 }
