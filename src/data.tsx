@@ -14,6 +14,7 @@ import Article13 from "./components/articles/2025/Article13.mdx";
 import Article14 from "./components/articles/2025/Article14.mdx";
 import Article15 from "./components/articles/2025/Article15.mdx";
 import Article16 from "./components/articles/2025/Article16.mdx";
+import Article17 from "./components/articles/2025/Article17.mdx";
 
 const blogs = [
 	{
@@ -127,6 +128,13 @@ const blogs = [
 		title: "What is MDX?",
 		date: "DEC 07",
 		content: <Article16 />,
+	},
+	{
+		id: "17",
+		url: "simpler-ui-elements-with-radix-primitives",
+		title: "Simpler UI Elements with Radix Primitives",
+		date: "DEC 14",
+		content: <Article17 />,
 	},
 ];
 
