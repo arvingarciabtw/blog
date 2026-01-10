@@ -5,7 +5,7 @@ function NavBar() {
 	return (
 		<header className={styles.headerApp}>
 			<nav>
-				<Link to="/">
+				<Link to="/" aria-label="Go back to home page">
 					<div className={styles.logo}></div>
 				</Link>
 			</nav>
