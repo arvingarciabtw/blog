@@ -46,15 +46,29 @@ function HomePage() {
 					Since August 2025, I have been self-studying web development. Below,
 					you can see my learnings throughout my journey.
 				</p>
+        <ArticlesSection year="2026">
+          {blogs.map(blog => (
+            +blog.id > 17 && (
+              <ArticleLink 
+                key={blog.id}
+                url={blog.url}
+                title={blog.title}
+                date={blog.date}
+              />
+            )
+          ))}
+        </ArticlesSection>
 				<ArticlesSection year="2025">
-					{blogs.map(blog => (
-						<ArticleLink
-							key={blog.id}
-							url={blog.url}
-							title={blog.title}
-							date={blog.date}
-						/>
-					))}
+          {blogs.map(blog => (
+            +blog.id <= 17 && (
+              <ArticleLink 
+                key={blog.id}
+                url={blog.url}
+                title={blog.title}
+                date={blog.date}
+              />
+            )
+          ))}
 				</ArticlesSection>
 			</Content>
 			<Footer />
