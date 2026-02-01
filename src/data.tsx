@@ -17,6 +17,7 @@ import Article16 from "./components/articles/2025/Article16.mdx";
 import Article17 from "./components/articles/2025/Article17.mdx";
 import Article1_2026 from "./components/articles/2026/Article1.mdx";
 import Article2_2026 from "./components/articles/2026/Article2.mdx";
+import Article3_2026 from "./components/articles/2026/Article3.mdx";
 
 const blogs = [
 	{
@@ -151,6 +152,13 @@ const blogs = [
 		title: "Full-Stack Made Easy with Next.js",
 		date: "JAN 18",
 		content: <Article2_2026 />,
+	},
+	{
+		id: "20",
+		url: "better-auth-with-better-auth",
+		title: "Better Auth with Better Auth",
+		date: "FEB 01",
+		content: <Article3_2026 />,
 	},
 ];
 
