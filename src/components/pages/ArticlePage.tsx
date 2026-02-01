@@ -22,7 +22,7 @@ function ArticlePage() {
 		<>
 			<NavBar />
 			<Content>
-				<article>
+				<article className={styles.container}>
 					<h1 className={styles.title}>{blog.title}</h1>
 					<p className={styles.date}>{blog.date}</p>
 					<div className={styles.containerArticleContent}>{blog.content}</div>

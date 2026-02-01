@@ -8,8 +8,12 @@
   align-items: center;
 }
 
+.container {
+  padding-bottom: 3rem;
+}
+
 .title {
-  margin: 0.15rem 0 0.75rem;
+  margin: 0.3rem 0 0.75rem;
   line-height: 1.2;
   font-weight: var(--weight-semi-bold);
 }
