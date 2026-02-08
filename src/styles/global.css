@@ -1,0 +1,109 @@
+/* == VARIABLES == */
+:root {
+  --accent: #2337ff;
+  --accent-dark: #000d8a;
+  --black: 15, 18, 25;
+  --gray: 96, 115, 159;
+  --gray-light: 229, 233, 240;
+  --gray-dark: 34, 41, 57;
+  --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+  --box-shadow:
+    0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+    0 16px 32px rgba(var(--gray), 33%);
+  --clr-bg: oklch(0.99 0.0041 91.45);
+  --clr-fg: oklch(0.18 0 0);
+}
+:root.dark {
+  --clr-bg: oklch(0.18 0 0);
+  --clr-fg: oklch(0.99 0.0041 91.45);
+}
+
+/* == FONTS == */
+@font-face {
+  font-family: "Atkinson";
+  src: url("/fonts/atkinson-variable.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains";
+  src: url("/fonts/jetbrains-variable.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* == BASE STRUCTURE == */
+body {
+  font-family: "Atkinson", sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-fg);
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+main {
+  padding: 1.5rem;
+  flex: 1;
+  align-self: center;
+  width: 100%;
+  max-width: 56rem;
+}
+
+/* == CSS RESET == */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:not(dialog) {
+  margin: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+#root,
+#__next {
+  isolation: isolate;
+}

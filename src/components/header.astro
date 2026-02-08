@@ -1,0 +1,27 @@
+---
+import ThemeIcon from "./theme-icon.astro"
+---
+
+<header>
+	<nav>
+    <a href="/">
+      <img src="/images/circle-blue-1x.webp" alt="Blog logo">
+    </a>
+    <ThemeIcon />
+	</nav>
+</header>
+<style>
+	nav {
+    padding: 1.5rem;
+    margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+    max-width: 896px;
+	}
+	nav a {
+		text-decoration: none;
+    display: grid;
+    place-items: center;
+	}
+</style>
