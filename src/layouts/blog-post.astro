@@ -1,9 +1,7 @@
 ---
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/base-head.astro';
 import Footer from '../components/footer.astro';
-import FormattedDate from '../components/formatted-date.astro';
 import Header from '../components/header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -15,70 +13,63 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
 			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+        margin: 1rem 0 3rem;
+        font-family: "JetBrains", monospace;
+        font-size: 0.875rem;
 			}
-			.last-updated-on {
-				font-style: italic;
-			}
+      article .prose {
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        color: var(--clr-gray);
+      }
+      article .prose :global(a) {
+        color: var(--clr-primary);
+      }
+      article .prose :global(h2) {
+        font-size: 1.5rem;
+      }
+      article .prose :global(a):hover {
+        text-decoration: none;
+      }
+      article .prose :global(blockquote) {
+        color: var(--clr-gray);
+        padding-left: 1rem;
+        border-left: 4px solid var(--clr-gray-alt);
+        font-style: italic;
+      }
+      article .prose :global(code) {
+        padding: 1px 6px;
+        font-family: "JetBrains", monospace;
+        font-size: 0.875rem;
+        background: var(--clr-bg-alt);
+        color: var(--clr-primary);
+        border-radius: 6px;
+      }
+      article .prose :global(pre) {
+        padding: 1rem;
+        font-family: "JetBrains", monospace;
+        font-size: 0.875rem;
+        background: oklch(0.25 0 0) !important;
+        border-radius: 6px;
+      }
+      article .prose :global(pre) > :global(code) {
+        padding: 0;
+        background: oklch(0.25 0 0);
+      }
 		</style>
 	</head>
-
 	<body>
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
-					</div>
-					<slot />
-				</div>
+        <h1>{title}</h1>
+        <p class="date">{pubDate.toString().slice(4, 10).toUpperCase()}</p>
+        <div class="prose">
+          <slot />
+        </div>
 			</article>
 		</main>
 		<Footer />

@@ -1,0 +1,57 @@
+---
+const { posts, year } = Astro.props;
+---
+
+<div class="posts-list-container">
+  <h2>{year}</h2>
+  <ul class="posts-list">
+    {posts.map((post: { id: string, data: { title: string, description: string, pubDate: Date } }) => (
+    <li class="post">            
+      <a href={`/blog/${post.id}/`} class="link">
+        <p class="title">{post.data.title}</p>
+        <p class="date">{post.data.pubDate.toString().slice(4, 10).toUpperCase()}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .posts-list-container {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .posts-list > .post .link {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--clr-gray);
+    transition: color 0.3s ease;
+  }
+  .posts-list > .post .link:hover {
+    color: var(--clr-primary);
+  }
+  .posts-list > .post .title {
+    max-width: 14rem; 
+  }
+  .posts-list > .post .date {
+    font-family: "JetBrains", monospace;
+    font-size: 0.875rem;
+  }
+  @media (min-width: 500px) {
+    .posts-list > .post .link {
+      align-items: center;
+    }
+    .posts-list > .post .title {
+      max-width: 100%;
+    }
+  }
+</style>
