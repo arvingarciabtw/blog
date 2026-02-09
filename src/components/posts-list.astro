@@ -7,11 +7,11 @@ const { posts, year } = Astro.props;
   <ul class="posts-list">
     {posts.map((post: { id: string, data: { title: string, description: string, pubDate: Date } }) => (
     <li class="post">            
-      <a href={`/blog/${post.id}/`} class="link">
+      <a href={`/${post.id}`} class="link">
         <p class="title">{post.data.title}</p>
         <p class="date">{post.data.pubDate.toString().slice(4, 10).toUpperCase()}</p>
-        </a>
-      </li>
+      </a>
+    </li>
     ))}
   </ul>
 </div>
@@ -32,6 +32,7 @@ const { posts, year } = Astro.props;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    gap: 1rem;
     text-decoration: none;
     color: var(--clr-gray);
     transition: color 0.3s ease;
