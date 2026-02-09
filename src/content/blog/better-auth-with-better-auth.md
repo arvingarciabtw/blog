@@ -14,7 +14,7 @@ And Better Auth certainly is! It supports many popular frameworks, OAuth provide
 
 I'll only cover the simple stuff and what I've used in my own project. Though, here's a link to the [documentation](https://www.better-auth.com/docs/introduction) if you're interested.
 
-You first just intall the package (with whatever package manager you want, in this case I use `pnpm`):
+You first just install the package (with whatever package manager you want, in this case I use `pnpm`):
 
 ```bash
 pnpm add better-auth
