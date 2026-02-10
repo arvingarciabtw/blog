@@ -23,10 +23,13 @@ const { title, description, pubDate, } = Astro.props;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        color: var(--clr-gray);
+        color: var(--color-gray-600);
+      }
+      :root.dark article .prose {
+        color: var(--color-gray-350);
       }
       article .prose :global(a) {
-        color: var(--clr-primary);
+        color: var(--color-primary);
       }
       article .prose :global(h2) {
         font-size: 1.5rem;
@@ -35,18 +38,27 @@ const { title, description, pubDate, } = Astro.props;
         text-decoration: none;
       }
       article .prose :global(blockquote) {
-        color: var(--clr-gray);
+        color: var(--color-gray-600);
         padding-left: 1rem;
-        border-left: 4px solid var(--clr-gray-alt);
+        border-left: 4px solid var(--color-gray-600);
+        font-style: italic;
+      }
+      :root.dark article .prose :global(blockquote) {
+        color: var(--color-gray-500);
+        padding-left: 1rem;
+        border-left: 4px solid var(--color-gray-600);
         font-style: italic;
       }
       article .prose :global(code) {
         padding: 1px 6px;
         font-family: "JetBrains", monospace;
         font-size: 0.875rem;
-        background: var(--clr-bg-alt);
-        color: var(--clr-primary);
+        background: var(--color-gray-150);
+        color: var(--color-primary);
         border-radius: 6px;
+      }
+      :root.dark article .prose :global(code) {
+        background: var(--color-gray-850);
       }
       article .prose :global(pre) {
         padding: 1rem;

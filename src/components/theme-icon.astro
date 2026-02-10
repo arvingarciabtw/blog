@@ -50,7 +50,10 @@ import { SunIcon, MoonIcon } from "astro-feather"
     transition: background 0.3s ease;
   } 
   #themeToggle:hover {
-    background: var(--clr-bg-alt);
+    background: var(--color-gray-150);
+  }
+  :root.dark #themeToggle:hover {
+    background: var(--color-gray-850);
   }
   .sun { 
     display: block;
@@ -65,9 +68,9 @@ import { SunIcon, MoonIcon } from "astro-feather"
     display: block;
   } 
   .sun :global(svg) { 
-    stroke: var(--clr-gray);
+    stroke: var(--color-gray-600);
   } 
   .moon :global(svg) { 
-    stroke: var(--clr-gray);
+    stroke: var(--color-gray-400);
   }
 </style>

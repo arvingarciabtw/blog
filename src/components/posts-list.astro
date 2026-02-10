@@ -34,11 +34,14 @@ const { posts, year } = Astro.props;
     justify-content: space-between;
     gap: 1rem;
     text-decoration: none;
-    color: var(--clr-gray);
+    color: var(--color-gray-600);
     transition: color 0.3s ease;
   }
+  :root.dark .posts-list > .post .link {
+    color: var(--color-gray-350);
+  }
   .posts-list > .post .link:hover {
-    color: var(--clr-primary);
+    color: var(--color-primary);
   }
   .posts-list > .post .title {
     max-width: 14rem; 
