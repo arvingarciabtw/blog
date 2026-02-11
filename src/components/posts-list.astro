@@ -43,6 +43,9 @@ const { posts, year } = Astro.props;
   .posts-list > .post .link:hover {
     color: var(--color-primary);
   }
+  :root.dark .posts-list > .post .link:hover {
+    color: var(--color-primary);
+  }
   .posts-list > .post .title {
     max-width: 14rem; 
   }
