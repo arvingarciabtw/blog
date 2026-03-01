@@ -1,6 +1,6 @@
 /* == VARIABLES == */
 :root {
-  --color-primary: #2360e0;
+  --color-primary: oklch(0.5307 0.2052 262.53);
   --color-bg: oklch(0.995 0 0);
   --color-fg: oklch(0.175 0 0);
   --color-gray-900: oklch(0.2 0 0);
@@ -186,6 +186,19 @@ h6 {
 }
 :root.dark ::selection {
   background: var(--color-gray-800);
+}
+
+/* == SYNTAX HIGHLIGHTING == */
+.astro-code,
+.astro-code span {
+  background-color: var(--color-gray-100) !important;
+}
+html.dark {
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--color-gray-900) !important;
+  }
 }
 
 /* == OTHERS == */

@@ -6,4 +6,12 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://blog.arvingarcia.com",
   integrations: [sitemap()],
+  markdown: {
+    shikiConfig: {
+      themes: {
+        light: "github-light",
+        dark: "github-dark",
+      },
+    },
+  },
 });
