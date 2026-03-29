@@ -1,0 +1,40 @@
+---
+title: "Your Grit Might Be Hurting You"
+description: "A blog article on explaining why grit might hurt you, if you don't understand it."
+pubDate: "Mar 29, 2026"
+---
+
+A while back, I did The Odin Project, an open-source curriculum on learning full stack web development. In the very early parts of the curriculum, a huge emphasis was placed on grit. That you'll go through very difficult moments, and that with grittiness, you'll overcome them.
+
+However, admittedly, I've been recently quite unhappy with full stack web development. If anything, I've kind of felt that way midway through the curriculum, but I pushed it off, and I told myself that perhaps I just wasn't being "gritty" enough. That I was just making excuses.
+
+To cope with my unhappiness as of late, I've been listening to videos of psychologists and researchers talking about a variety of different things. Happiness, optimism, and the like.
+
+And by the grace of the YouTube algorithm, I was recommended an episode of the A Bit of Optimism podcast, where Angela Duckworth was the guest. She's a researcher who's done a ton of research on grit, and she's probably the one where you've heard of grit from. She has this really popular TED talk, maybe you've watched it before.
+
+The last section of the podcast completely turned my view of grit upside down. I thought that grit meant persevering _no matter what_. Even when you have to force yourself out of bed to do the thing. Even if you feel unhappy doing that thing for so long. Even if you instinctively feel that it doesn't feel right.
+
+The host, Simon Sinek, even acknowledged that grit is dangerous. If you have a misconception of grit, you force yourself to do something that you don't want to do, or it serves as feedback to yourself, that you just need more grit. You become someone who just "grits it out".
+
+All this to say, so what is grit? Mrs. Duckworth cleared up the misconception, and this is where my perspective completely changed.
+
+There are four things that runs through the mind of someone who has grit:
+
+1. This is interesting.
+2. This is important.
+3. I can do this.
+4. I know what to try next.
+
+At its core, gritty people don't just hammer through something, just for the sake of grit. Someone has grit towards something they find interesting. Something they find important. Something they believe they can do. Something they know how to improve on through practice.
+
+It sounds so simple, but truthfully, I had it backwards the whole time. I was being gritty, for the wrong thing.
+
+Being honest with myself, I'm not really interested in full stack development anymore. Nor, do I even know what to try next. Instead of mastering one craft, I’m expected to be a mediocre architect, a junior DevOps engineer, and a cloud engineer all at once. This role has turned into something that I just don't want to do.
+
+Moving forward, I'm going to make a shift towards what I truly find interesting. What I truly find important. What I truly believe I can excel at. What I truly believe I can pour in deliberate practice.
+
+And to me, that is design and frontend development.
+
+To end this article, here's something that Mrs. Duckworth said during the podcast:
+
+> I hereby give everybody license, and endorsement, and even encouragement, to quit the things that you hate. Don't spend another day doing things that you don't really want to do.
