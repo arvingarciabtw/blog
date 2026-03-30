@@ -4,15 +4,15 @@ description: "A blog article on explaining why grit might hurt you, if you don't
 pubDate: "Mar 29, 2026"
 ---
 
-A while back, I did The Odin Project, an open-source curriculum on learning full stack web development. In the very early parts of the curriculum, a huge emphasis was placed on grit. That you'll go through very difficult moments, and that with grittiness, you'll overcome them.
+A while back, I did [The Odin Project](https://www.theodinproject.com/), an open-source curriculum on learning full stack web development. In the very early parts of the curriculum, a huge emphasis was placed on [grit](https://www.theodinproject.com/lessons/foundations-motivation-and-mindset). That you'll go through very difficult moments, and that with grittiness, you'll overcome them.
 
 However, admittedly, I've been recently quite unhappy with full stack web development. If anything, I've kind of felt that way midway through the curriculum, but I pushed it off, and I told myself that perhaps I just wasn't being "gritty" enough. That I was just making excuses.
 
 To cope with my unhappiness as of late, I've been listening to videos of psychologists and researchers talking about a variety of different things. Happiness, optimism, and the like.
 
-And by the grace of the YouTube algorithm, I was recommended an episode of the A Bit of Optimism podcast, where Angela Duckworth was the guest. She's a researcher who's done a ton of research on grit, and she's probably the one where you've heard of grit from. She has this really popular TED talk, maybe you've watched it before.
+And by the grace of the YouTube algorithm, I was recommended an [episode](https://www.youtube.com/watch?v=KAi2L_b1V2I) of the A Bit of Optimism podcast, where Angela Duckworth was the guest. She's a researcher who's done a ton of research on grit, and she's probably the one where you've heard of grit from. She has this really popular [TED talk](https://www.youtube.com/watch?v=H14bBuluwB8), maybe you've watched it before.
 
-The last section of the podcast completely turned my view of grit upside down. I thought that grit meant persevering _no matter what_. Even when you have to force yourself out of bed to do the thing. Even if you feel unhappy doing that thing for so long. Even if you instinctively feel that it doesn't feel right.
+The last section of the podcast completely turned my view of grit upside down. I thought that grit meant persevering _no matter what_. Even when you have to force yourself out of bed to do the thing. Even if you feel unhappy doing that thing for so long. Persevere, persevere, persevere, practice, practice, practice.
 
 The host, Simon Sinek, even acknowledged that grit is dangerous. If you have a misconception of grit, you force yourself to do something that you don't want to do, or it serves as feedback to yourself, that you just need more grit. You become someone who just "grits it out".
 
