@@ -18,7 +18,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 <!-- == GLOBAL METADATA == -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="/images/circle-blue-1x.webp" />
+<link rel="icon" type="image/png" href="/images/favicon.png">
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link
 	rel="alternate"
@@ -29,8 +29,10 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- == FONT PRELOADS == -->
-<link rel="preload" href="/fonts/atkinson-variable.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/fonts/jetbrains-variable.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/offbit-trial/101.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/sentient/variable.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/departure-mono/regular.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/commit-mono/regular.woff2" as="font" type="font/woff2" crossorigin />
 
 <!-- == CANONICAL URL == -->
 <link rel="canonical" href={canonicalURL} />

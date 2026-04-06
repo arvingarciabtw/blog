@@ -4,8 +4,8 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../components/base-head.astro';
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
-import Description from "../components/description.astro"
 import PostsList from "../components/posts-list.astro"
+import Divider from "../components/divider.astro"
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -14,20 +14,38 @@ const posts = (await getCollection('blog')).sort(
 function getPostsByYear(year: number) {
   return posts.filter((post) => post.data.pubDate.getFullYear() === year)
 }
+
+const categories = {
+  2026: ["Svelte", "Go", "Graphics"],
+  2025: ["Foundations", "Full Stack"],
+}
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <style>
+    .root-wrapper {
+      margin: 0 1rem;
+      width: 100%;
+      max-width: 80rem;
+      border-left: 1px solid var(--color-gray-200);
+      border-right: 1px solid var(--color-gray-200);
+    }
+  </style>
 	</head>
 	<body>
-		<Header />
-		<main>
-      <Description />
-      <PostsList posts={getPostsByYear(2026)} year={2026}/>
-      <PostsList posts={getPostsByYear(2025)} year={2025}/>
-		</main>
-		<Footer />
+    <div class="root-wrapper">
+      <Header />
+      <Divider />
+      <main>
+        <PostsList posts={getPostsByYear(2026)} year={2026} categories={categories[2026]} />
+        <Divider />
+        <PostsList posts={getPostsByYear(2025)} year={2025} categories={categories[2025]} />
+      </main>
+      <Divider />
+      <Footer />
+    </div>
 	</body>
 </html>

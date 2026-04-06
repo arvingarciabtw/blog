@@ -1,29 +1,67 @@
 ---
-import ThemeIcon from "./theme-icon.astro"
 ---
 
 <header>
-	<nav>
-    <a href="/">
-      <img src="/images/circle-blue.svg" alt="Blog logo" width="32" height="32" class="logo">
-    </a>
-    <ThemeIcon />
-	</nav>
+  <h1 class="title">Blog</h1>
+  <div class="info">
+    <p class="sub-info">I write about what I learn here.</p>
+    <p class="sub-info">A blog by <a href="https://www.arvingarcia.com" target="_blank" rel="noopener noreferrer" class="developer">Arvin Garcia</a>.</p>
+  </div>
 </header>
 <style>
-	nav {
-    padding: var(--space-lg);
+	header {
+    padding: var(--space-xl) var(--space-3xl);
     margin: auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-    max-width: 896px;
+    width: 100%;
+    max-width: 80rem;
+
+    .title {
+      margin-top: var(--space-sm);
+      font-family: "offbit-trial-101", sans-serif;
+      font-size: var(--font-3xl);
+      font-weight: var(--weight-regular);
+      text-transform: uppercase;
+    }
+
+    .info {
+      font-family: "sentient", serif;
+      font-size: 0.875rem;
+
+      .sub-info {
+        text-align: right;
+      }
+      .sub-info:last-of-type {
+        font-weight: var(--weight-medium);
+      }
+
+      .developer {
+        color: var(--color-fg);
+        border-bottom: 1px dotted var(--color-fg);
+        text-decoration: none;
+      }
+
+      .developer:hover {
+        color: var(--color-primary);
+        border-bottom: 1px solid var(--color-primary);
+      }
+    }
 	}
-	nav a {
-    color: var(--color-bg);
-		text-decoration: none;
-    display: grid;
-    place-items: center;
-    border-radius: var(--radius-full);
-	}
+
+  @media (max-width: 500px) {
+    header {
+      padding: var(--space-2xs) var(--space-lg) var(--space-lg);
+      flex-direction: column;
+      align-items: start;
+      gap: var(--space-lg);
+
+      .info {
+        .sub-info {
+          text-align: left;
+        }
+      }
+    }
+  }
 </style>

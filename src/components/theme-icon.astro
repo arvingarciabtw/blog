@@ -1,12 +1,11 @@
 ---
-import { SunIcon, MoonIcon } from "astro-feather"
 ---
 <button id="themeToggle" aria-label="Toggle theme">
   <span class="sun">
-    <SunIcon />
+    <img src="/images/sun-black.svg" alt="Sun icon">
   </span>
   <span class="moon">
-    <MoonIcon />
+    <img src="/images/moon-white.svg" alt="Moon icon">
   </span>
 </button>
 <script is:inline>
@@ -49,12 +48,6 @@ import { SunIcon, MoonIcon } from "astro-feather"
     cursor: pointer;
     transition: background 0.3s ease;
   } 
-  #themeToggle:hover {
-    background: var(--color-gray-150);
-  }
-  :root.dark #themeToggle:hover {
-    background: var(--color-gray-850);
-  }
   .sun { 
     display: block;
   } 

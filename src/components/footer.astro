@@ -1,24 +1,82 @@
 ---
+  import ThemeIcon from "./theme-icon.astro"
 ---
 
-<footer>
-  Made by   
-  <a href="" class="author" target="_blank" rel="noopener noreferrer">
-    @arvingarciabtw
-  </a>
+<footer class="footer">
+  <ul class="socials-list">
+    <li class="social">
+      <a
+        class="link"
+        href="https://github.com/arvingarciabtw"
+        target="_blank"
+        rel="noopener noreferrer">GitHub</a
+      >
+    </li>
+    <li class="social">
+      <a
+        class="link"
+        href="https://www.arvingarcia.com/"
+        target="_blank"
+        rel="noopener noreferrer">Folio</a
+      >
+    </li>
+  </ul>
+  <p class="developer">© 2026 Arvin Garcia</p>
+  <div class="modes">
+    <ThemeIcon />
+  </div>
 </footer>
+
 <style>
-	footer {
-		padding: var(--space-lg);
-    margin: auto;
-		text-align: center;
-    max-width: 56rem;
-	}
-  footer .author {
-    color: var(--clr-fg);
-    text-decoration: underline;
+  .footer {
+    padding: var(--space-2xl) var(--space-3xl);
+    padding-right: var(--space-2xl);
+    width: 100%;
+    max-width: 80rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .developer, .socials-list {
+      font-family: "departure-mono", monospace;
+      font-size: var(--font-sm);
+      text-transform: uppercase;
+    }
+
+    .socials-list {
+      padding: 0;
+      display: flex;
+      gap: var(--space-xl);
+      list-style-type: none;
+
+      .social {
+        .link {
+          color: var(--color-fg);
+          text-decoration: none;
+        }
+        .link:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
-  footer .author:hover {
-    text-decoration: none;
+
+  @media (max-width: 700px) {
+    .footer {
+      .developer {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .footer {
+      padding: var(--space-lg);
+      gap: var(--space-md);
+
+      .socials-list {
+        gap: var(--space-lg);
+      }
+    }
   }
 </style>
