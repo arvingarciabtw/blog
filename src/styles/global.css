@@ -99,6 +99,10 @@
   src: url("/fonts/sentient/variable.woff2") format("woff2");
 }
 @font-face {
+  font-family: "gambetta";
+  src: url("/fonts/gambetta/variable.woff2") format("woff2");
+}
+@font-face {
   font-family: "departure-mono";
   src: url("/fonts/departure-mono/regular.woff2") format("woff2");
 }
