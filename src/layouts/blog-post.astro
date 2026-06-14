@@ -3,7 +3,7 @@ import BaseHead from '../components/base-head.astro';
 import Footer from '../components/footer.astro';
 import Divider from "../components/divider.astro";
 
-const { title, description, pubDate, } = Astro.props;
+const { title, description, pubDate, headings } = Astro.props;
 ---
 
 <html lang="en">
@@ -56,10 +56,16 @@ const { title, description, pubDate, } = Astro.props;
           flex-direction: column;
           gap: var(--space-md);
 
-          p {
+          a {
+            text-decoration: none;
+            color: var(--color-fg);
             font-family: "departure-mono", monospace;
             font-size: var(--font-sm);
             text-transform: uppercase;
+          }
+
+          a:hover {
+            color: var(--color-primary);
           }
         }
 
@@ -87,7 +93,12 @@ const { title, description, pubDate, } = Astro.props;
         text-decoration: none;
       }
       :global(.prose h2) {
-        font-size: var(--font-xl);
+        font-family: "departure-mono", monospace;
+        font-size: var(--font-sm);
+        font-weight: var(--weight-regular);
+      }
+      :global(.prose h2::before) {
+        content: "// "
       }
       :global(.prose blockquote) {
         color: var(--color-gray-700);
@@ -118,6 +129,17 @@ const { title, description, pubDate, } = Astro.props;
       }
       html.dark :global(.prose pre > code > * > *) {
         background-color: var(--color-gray-100) !important;
+      }
+      :global(.prose ul) {
+        margin-top: calc(var(--space-xs) * -1);
+      }
+      :global(.prose ul li) {
+        color: var(--color-primary);
+      }
+      :global(.prose ul li::before) {
+        margin-right: var(--space-2xs);
+        font-family: "departure-mono";
+        content: "> ";
       }
 
       @media (max-width: 700px) {
@@ -160,11 +182,9 @@ const { title, description, pubDate, } = Astro.props;
               <slot />
             </div>
             <aside class="sidebar">
-              <p>STATIC HEADING 1</p>
-              <p>STATIC HEADING 2</p>
-              <p>STATIC HEADING 3</p>
-              <p>STATIC HEADING 4</p>
-              <p>STATIC HEADING 5</p>
+              {headings?.map((heading) => (
+                <a href={`#${heading.slug}`}>{heading.text}</a>
+              ))}
             </aside>
           </div>
         </article>
