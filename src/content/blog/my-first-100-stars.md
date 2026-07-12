@@ -1,0 +1,21 @@
+---
+title: "My First 100 Stars"
+description: "Talking about my first 100 stars on GitHub!"
+pubDate: "Jul 12, 2026"
+---
+
+For the past month, I've been gradually working on [ditto](https://github.com/arvingarciabtw/ditto), a system-wide ASCII keyboard visualizer. And about a week ago, the repository reached over 100 stars! I know it's mostly just a vanity metric, but I can't help but feel a little bit of joy that a handful of people found the project interesting enough that they'd give it a star.
+
+Its not just the stars though, but also the fact that some people went out of their way to open up issues and PRs. Stuff like [improving the codebase](https://github.com/arvingarciabtw/ditto/issues/1) and implementing [Nix support](https://github.com/arvingarciabtw/ditto/pull/3). It's really cool that people want to see more out of the project!
+
+Not just on GitHub though, but I've also heard a lot of really nice suggestions from people online. I've mainly posted about this project over at different subreddits, and users suggested a couple of cool ideas. Ones that I'm working on right now are adding a keycast mode, implementing a smoother style with box drawing characters, and applying layers.
+
+Apart from that, it also made me realize that some users wanted support, for something that I originally thought would be not so important. Namely, cross-platform support. The target audience for the program was developers who rice a lot, so Linux users, who in large part use Wayland compositors. But some users wanted cross-platform support, so I had to prioritize that much earlier than I anticipated.
+
+I guess I say all of this, to point out that having actual users is an eye-opening experience. It's one thing to write a personal project, but actually sharing a program you've made and having a handful of people use it, is something else entirely. You feel a sense of responsibility and accountability, to make the software as best as you can.
+
+And plus, it's open sourced! So users themselves can contribute and make the program better, if they'd like. Open source is a beautiful thing, and I'm looking to be much more competent enough in the future so I myself can contribute to popular software.
+
+While I'm still new to this and I can't give pragmatic advice for how to get people interested in your software, the main thing is to probably just... actually make something that's interesting. If what you've made isn't unique, at least make yours _much_ better in some aspect.
+
+And of course, get your stuff out there! People won't know about what you've made, if you don't make it known.
