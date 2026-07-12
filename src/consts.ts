@@ -1,3 +1,3 @@
-export const SITE_TITLE = "Blog | Arvin Garcia";
+export const SITE_TITLE = "blog";
 export const SITE_DESCRIPTION =
-  "I'm Arvin Garcia, and this is my blog where I write about what I'm learning";
+  "arvin garcia's blog. writing about what i'm learning, or whatever comes to mind.";

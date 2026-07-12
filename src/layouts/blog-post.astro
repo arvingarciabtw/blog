@@ -48,6 +48,7 @@ const { title, description, pubDate, headings } = Astro.props;
         }
 
         .sidebar {
+          height: 100%;
           position: sticky;
           top: 0;
           align-self: start;
@@ -55,6 +56,23 @@ const { title, description, pubDate, headings } = Astro.props;
           display: flex;
           flex-direction: column;
           gap: var(--space-md);
+
+          /* DIAGONALS */
+          /* background-image: repeating-linear-gradient(135deg, */
+          /*    var(--color-gray-100) 10px,  */
+          /*    var(--color-gray-100) 10px,  */
+          /*    transparent 12px,  */
+          /*    transparent 20px);  */
+
+          /* DOTS */
+          --dot-bg: var(--color-bg);
+          --dot-color: var(--color-gray-150);
+          --dot-size: 1px;
+          --dot-space: 12px;
+            background:
+              linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+              linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+              var(--dot-color);
 
           a {
             text-decoration: none;

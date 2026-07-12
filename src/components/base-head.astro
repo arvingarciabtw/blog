@@ -19,6 +19,20 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+    href="/images/favicon-for-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+    href="/images/favicon-for-light.png"
+      media="(prefers-color-scheme: light)"
+    />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link
 	rel="alternate"
