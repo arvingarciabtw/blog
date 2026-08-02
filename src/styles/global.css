@@ -95,10 +95,6 @@
   src: url("/fonts/offbit-trial/101.woff2") format("woff2");
 }
 @font-face {
-  font-family: "sentient";
-  src: url("/fonts/sentient/variable.woff2") format("woff2");
-}
-@font-face {
   font-family: "gambetta";
   src: url("/fonts/gambetta/variable.woff2") format("woff2");
 }
