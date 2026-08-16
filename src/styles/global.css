@@ -189,9 +189,11 @@ html {
 /* == SELECTION == */
 ::selection {
   background: var(--color-gray-150);
+  color: var(--color-fg);
 }
 .prose pre code *::selection {
-  background: var(--color-gray-700);
+  background: var(--color-gray-200);
+  color: var(--color-fg);
 }
 
 /* == SYNTAX HIGHLIGHTING == */
