@@ -1,5 +1,5 @@
 ---
-title: "Don't Just Check Errors..."
+title: "Don't Just Check Errors"
 description: "Don't just check errors, handle them gracefully."
 pubDate: "Aug 30, 2026"
 ---

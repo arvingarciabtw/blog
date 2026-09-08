@@ -8,7 +8,7 @@ const { posts, year, categories = [] } = Astro.props;
     <div class="categories">
     {categories.map((category: string, index: number) => (
       <>
-        <p class="category">{category}</p>
+      <p class={`category ${category.toLowerCase()}`} >{category}</p>
         {index < categories.length - 1 && <p class="spacer">•</p>}
       </>
     ))}
@@ -18,7 +18,7 @@ const { posts, year, categories = [] } = Astro.props;
     {posts.map((post: { id: string, data: { title: string, description: string, pubDate: Date } }) => (
     <li class="post">            
       <a href={`/${post.id}`} class="link">
-        <p class="title">{post.data.title}.</p>
+        <p class="title">{post.data.title}</p>
         <div class="separator"></div>
         <p class="date">{post.data.pubDate.toString().slice(4, 10).toUpperCase()}</p>
       </a>
@@ -41,7 +41,6 @@ const { posts, year, categories = [] } = Astro.props;
     }
 
     .year {
-      font-family: "departure-mono", monospace;
       font-size: var(--font-sm);
       font-weight: normal;
     }
@@ -51,16 +50,15 @@ const { posts, year, categories = [] } = Astro.props;
       gap: var(--space-md);
 
       .category {
-        font-family: "departure-mono", monospace;
         font-size: var(--font-sm);
         font-weight: normal;
-        text-transform: uppercase;
+        text-transform: lowercase;
       }
 
       .spacer {
-        font-family: "departure-mono", monospace;
         font-size: var(--font-sm);
         font-weight: normal;
+        color: var(--color-gray-600);
       }
     }
   }
@@ -86,30 +84,25 @@ const { posts, year, categories = [] } = Astro.props;
       }
 
       .title {
-        font-family: "gambetta", serif;
         font-size: var(--font-sm);
         font-weight: var(--weight-medium);
         color: var(--color-fg);
+        text-transform: lowercase;
+        line-height: 2;
       }
 
       .separator {
         margin-bottom: 6px;
         align-self: end;
         height: 100%;
-        border-bottom: 1px dotted var(--color-gray-600);
+        border-bottom: 1px dotted var(--color-gray-500);
         flex: 1;
-      }
-      html.dark .date {
-        border-color: var(--color-gray-200);
       }
 
       .date {
-        font-family: "departure-mono", monospace;
-        font-size: var(--font-xs);
-        color: var(--color-gray-700);
-      }
-      html.dark .date {
-        color: var(--color-gray-200);
+        color: var(--color-gray-500);
+        text-transform: lowercase;
+        line-height: 2;
       }
     }
 
@@ -140,7 +133,7 @@ const { posts, year, categories = [] } = Astro.props;
 
         .year,
         .category {
-          font-size: var(--font-sm);
+          font-size: var(--font-xs);
         }
 
         .categories {
@@ -155,6 +148,7 @@ const { posts, year, categories = [] } = Astro.props;
 
       .posts-list {
         margin-top: var(--space-xl);
+        font-size: var(--font-xs);
         .post {
           .link {
             display: grid;
@@ -164,9 +158,13 @@ const { posts, year, categories = [] } = Astro.props;
           }
           .title {
             max-width: 100%;
+            font-size: var(--font-xs);
           }
           .separator {
             display: none;
+          }
+          .date {
+            justify-self: end;
           }
         }
       }

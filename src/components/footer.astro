@@ -5,6 +5,9 @@
 <footer class="footer">
   <ul class="socials-list">
     <li class="social">
+      <a class="link" href="/rss.xml">RSS</a>
+    </li>
+    <li class="social">
       <a
         class="link"
         href="https://github.com/arvingarciabtw"
@@ -19,9 +22,6 @@
         target="_blank"
         rel="noopener noreferrer">Folio</a
       >
-    </li>
-    <li class="social">
-      <a class="link" href="/rss.xml">RSS</a>
     </li>
   </ul>
   <p class="developer">© 2026 Arvin Garcia</p>
@@ -41,9 +41,8 @@
     align-items: center;
 
     .developer, .socials-list {
-      font-family: "departure-mono", monospace;
       font-size: var(--font-sm);
-      text-transform: uppercase;
+      text-transform: lowercase;
     }
 
     .socials-list {
@@ -79,6 +78,7 @@
 
       .socials-list {
         gap: var(--space-lg);
+        font-size: var(--font-xs);
       }
     }
   }

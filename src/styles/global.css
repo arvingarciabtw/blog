@@ -1,25 +1,43 @@
 /* == VARIABLES == */
 :root {
-  --color-primary: oklch(0.4672 0.3027 266.24);
-  --color-bg: oklch(0.995 0 0);
-  --color-fg: oklch(0.175 0 0);
-  --color-gray-900: oklch(0.2 0 0);
-  --color-gray-850: oklch(0.25 0 0);
-  --color-gray-800: oklch(0.3 0 0);
-  --color-gray-750: oklch(0.35 0 0);
-  --color-gray-700: oklch(0.4 0 0);
-  --color-gray-650: oklch(0.45 0 0);
-  --color-gray-600: oklch(0.5 0 0);
-  --color-gray-550: oklch(0.55 0 0);
-  --color-gray-500: oklch(0.6 0 0);
-  --color-gray-450: oklch(0.65 0 0);
-  --color-gray-400: oklch(0.7 0 0);
-  --color-gray-350: oklch(0.75 0 0);
-  --color-gray-300: oklch(0.8 0 0);
-  --color-gray-250: oklch(0.85 0 0);
-  --color-gray-200: oklch(0.9 0 0);
-  --color-gray-150: oklch(0.95 0 0);
-  --color-gray-100: oklch(0.975 0 0);
+  --color-primary: oklch(0.5399 0.1906 257.48); /* GitHub accent blue #0969da */
+  --color-bg: oklch(1 0 0); /* #ffffff */
+  --color-fg: oklch(0.2542 0.0111 254.04); /* #1f2328 */
+  --color-gray-900: oklch(0.2542 0.0111 254.04);
+  --color-gray-850: oklch(0.2960 0.0130 253.17);
+  --color-gray-800: oklch(0.3378 0.0148 252.30);
+  --color-gray-750: oklch(0.3716 0.0166 251.84);
+  --color-gray-700: oklch(0.4053 0.0184 251.38);
+  --color-gray-650: oklch(0.4451 0.0190 251.20);
+  --color-gray-600: oklch(0.4849 0.0196 251.02);
+  --color-gray-550: oklch(0.5250 0.0192 250.99);
+  --color-gray-500: oklch(0.5651 0.0189 250.97);
+  --color-gray-450: oklch(0.6154 0.0185 250.94);
+  --color-gray-400: oklch(0.6658 0.0181 250.92);
+  --color-gray-350: oklch(0.7220 0.0172 249.48);
+  --color-gray-300: oklch(0.7783 0.0163 248.04);
+  --color-gray-250: oklch(0.8271 0.0143 248.00);
+  --color-gray-200: oklch(0.8758 0.0123 247.97);
+  --color-gray-150: oklch(0.9115 0.0096 247.93);
+  --color-gray-100: oklch(0.9472 0.0069 247.90);
+
+  /* ANSI 16 — GitHub Light terminal palette */
+  --color-ansi-black: oklch(0.2542 0.0111 254.04); /* #1f2328 */
+  --color-ansi-red: oklch(0.5517 0.2051 24.53); /* #cf222e */
+  --color-ansi-green: oklch(0.4391 0.1179 148.07); /* #116329 */
+  --color-ansi-yellow: oklch(0.3298 0.0722 68.31); /* #4d2d00 */
+  --color-ansi-blue: oklch(0.5399 0.1906 257.48); /* #0969da */
+  --color-ansi-magenta: oklch(0.5631 0.2069 294.97); /* #8250df */
+  --color-ansi-cyan: oklch(0.5370 0.0845 202.40); /* #1b7c83 */
+  --color-ansi-white: oklch(0.4951 0.0215 250.78); /* #59636e */
+  --color-ansi-black-bright: oklch(0.3648 0.0145 252.28); /* #393f46 */
+  --color-ansi-red-bright: oklch(0.4591 0.1777 21.87); /* #a40e26 */
+  --color-ansi-green-bright: oklch(0.5244 0.1401 148.04); /* #1a7f37 */
+  --color-ansi-yellow-bright: oklch(0.3937 0.0852 68.93); /* #633c01 */
+  --color-ansi-blue-bright: oklch(0.6418 0.1951 254.98); /* #218bff */
+  --color-ansi-magenta-bright: oklch(0.6690 0.1902 297.44); /* #a475f9 */
+  --color-ansi-cyan-bright: oklch(0.6144 0.0945 217.77); /* #3192aa */
+  --color-ansi-white-bright: oklch(0.6329 0.0228 254.97); /* #818b98 */
 
   --font-4xl: 4rem;
   --font-3xl: 3rem;
@@ -65,46 +83,57 @@
   --radius-sm: 0.75rem;
   --radius-xs: 0.5rem;
   --radius-2xs: 0.25rem;
+
 }
 :root.dark {
-  --color-primary: oklch(0.82 0.22 142);
-  --color-bg: oklch(0.175 0 0);
-  --color-fg: oklch(0.995 0 0);
-  --color-gray-900: oklch(0.975 0 0);
-  --color-gray-850: oklch(0.95 0 0);
-  --color-gray-800: oklch(0.9 0 0);
-  --color-gray-750: oklch(0.85 0 0);
-  --color-gray-700: oklch(0.8 0 0);
-  --color-gray-650: oklch(0.75 0 0);
-  --color-gray-600: oklch(0.7 0 0);
-  --color-gray-550: oklch(0.65 0 0);
-  --color-gray-500: oklch(0.6 0 0);
-  --color-gray-450: oklch(0.55 0 0);
-  --color-gray-400: oklch(0.5 0 0);
-  --color-gray-350: oklch(0.45 0 0);
-  --color-gray-300: oklch(0.4 0 0);
-  --color-gray-250: oklch(0.35 0 0);
-  --color-gray-200: oklch(0.3 0 0);
-  --color-gray-150: oklch(0.25 0 0);
-  --color-gray-100: oklch(0.2 0 0);
+  --color-primary: oklch(0.7717 0.1880 145.48);; /* GitHub dark success green #3fb950 */
+  --color-bg: oklch(0.1763 0.0140 258.36); /* #0d1117 */
+  --color-fg: oklch(0.9425 0.0111 243.66); /* #e6edf3 */
+  --color-gray-900: oklch(0.9703 0.0103 247.93);
+  --color-gray-850: oklch(0.9136 0.0122 247.96);
+  --color-gray-800: oklch(0.8569 0.0141 247.99);
+  --color-gray-750: oklch(0.8209 0.0158 249.44);
+  --color-gray-700: oklch(0.7849 0.0174 250.88);
+  --color-gray-650: oklch(0.7237 0.0178 250.90);
+  --color-gray-600: oklch(0.6625 0.0181 250.92);
+  --color-gray-550: oklch(0.6127 0.0189 253.63);
+  --color-gray-500: oklch(0.5629 0.0196 256.33);
+  --color-gray-450: oklch(0.5187 0.0203 254.91);
+  --color-gray-400: oklch(0.4745 0.0211 253.48);
+  --color-gray-350: oklch(0.4177 0.0196 254.12);
+  --color-gray-300: oklch(0.3609 0.0182 254.76);
+  --color-gray-250: oklch(0.3398 0.0174 255.20);
+  --color-gray-200: oklch(0.3186 0.0165 255.64);
+  --color-gray-150: oklch(0.2947 0.0157 256.22);
+  --color-gray-100: oklch(0.2708 0.0149 256.80);
+
+  /* ANSI 16 — GitHub Dark terminal palette */
+  --color-ansi-black: oklch(0.3339 0.0223 256.40); /* #2f3742 */
+  --color-ansi-red: oklch(0.7345 0.1626 25.78); /* #ff7b72 */
+  --color-ansi-green: oklch(0.6951 0.1809 145.62); /* #3fb950 */
+  --color-ansi-yellow: oklch(0.7196 0.1401 79.91); /* #d29922 */
+  --color-ansi-blue: oklch(0.7153 0.1518 253.31); /* #58a6ff */
+  --color-ansi-magenta: oklch(0.7392 0.1626 301.93); /* #be8fff */
+  --color-ansi-cyan: oklch(0.7555 0.1155 202.14); /* #39c5cf */
+  --color-ansi-white: oklch(0.9703 0.0103 247.93); /* #f0f6fc */
+  --color-ansi-black-bright: oklch(0.5287 0.0179 257.24); /* #656c76 */
+  --color-ansi-red-bright: oklch(0.8014 0.1134 25.81); /* #ffa198 */
+  --color-ansi-green-bright: oklch(0.7717 0.1880 145.48); /* #56d364 */
+  --color-ansi-yellow-bright: oklch(0.7904 0.1386 85.24); /* #e3b341 */
+  --color-ansi-blue-bright: oklch(0.7857 0.1153 246.66); /* #79c0ff */
+  --color-ansi-magenta-bright: oklch(0.8005 0.1275 305.86); /* #d2a8ff */
+  --color-ansi-cyan-bright: oklch(0.8036 0.1107 201.78); /* #56d4dd */
+  --color-ansi-white-bright: oklch(1 0 0); /* #ffffff */
 }
 
 /* == FONTS == */
 @font-face {
-  font-family: "offbit-trial-101";
-  src: url("/fonts/offbit-trial/101.woff2") format("woff2");
-}
-@font-face {
-  font-family: "gambetta";
-  src: url("/fonts/gambetta/variable.woff2") format("woff2");
-}
-@font-face {
-  font-family: "departure-mono";
-  src: url("/fonts/departure-mono/regular.woff2") format("woff2");
-}
-@font-face {
   font-family: "commit-mono";
   src: url("/fonts/commit-mono/regular.woff2") format("woff2");
+}
+body {
+  font-family: "commit-mono", monospace;
+  font-size: var(--font-sm);
 }
 
 /* == BASE STRUCTURE == */
@@ -117,7 +146,6 @@ body {
   align-items: center;
   min-height: 100dvh;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 main {
   max-width: 80rem;

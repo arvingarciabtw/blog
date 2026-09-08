@@ -1,7 +1,6 @@
 ---
 import BaseHead from '../components/base-head.astro';
 import Footer from '../components/footer.astro';
-import Divider from "../components/divider.astro";
 
 const { title, description, pubDate, headings } = Astro.props;
 ---
@@ -10,81 +9,38 @@ const { title, description, pubDate, headings } = Astro.props;
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-      .wrapper {
-        border-left: 1px solid var(--color-gray-200);
-        border-right: 1px solid var(--color-gray-200);
-      }
       article {
         .top {
           padding: var(--space-3xl);
+          padding-top: var(--space-xl);
+          padding-bottom: var(--space-sm);
           display: flex;
           flex-direction: column;
-          gap: var(--space-md);
+          gap: var(--space-xs);
+          text-transform: lowercase;
         }
 
         .back {
           text-decoration: none;
           color: var(--color-fg);
-          font-family: "departure-mono", monospace;
           font-size: var(--font-md);
         }
 
         .title {
-          font-family: "offbit-trial-101", sans-serif;
-          font-size: var(--font-3xl);
-          font-weight: var(--weight-regular);
-          line-height: 1.25;
-        }
-
-        .date {
-          margin-top: var(--space-2xl);
-          font-family: "departure-mono", monospace;
+          padding: 1px var(--space-xs);
+          margin-top: var(--space-5xl);
           font-size: var(--font-sm);
+          font-weight: var(--weight-regular);
+          line-height: 2;
+          background: var(--color-primary);
+          color: var(--color-bg);
+          width: fit-content;
+          text-wrap: wrap;
         }
 
         .middle {
           display: grid;
           grid-template-columns: 1fr 300px;
-        }
-
-        .sidebar {
-          height: 100%;
-          position: sticky;
-          top: 0;
-          align-self: start;
-          padding: var(--space-3xl);
-          display: flex;
-          flex-direction: column;
-          gap: var(--space-md);
-
-          /* DIAGONALS */
-          /* background-image: repeating-linear-gradient(135deg, */
-          /*    var(--color-gray-100) 10px,  */
-          /*    var(--color-gray-100) 10px,  */
-          /*    transparent 12px,  */
-          /*    transparent 20px);  */
-
-          /* DOTS */
-          --dot-bg: var(--color-bg);
-          --dot-color: var(--color-gray-150);
-          --dot-size: 1px;
-          --dot-space: 12px;
-            background:
-              linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-              linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-              var(--dot-color);
-
-          a {
-            text-decoration: none;
-            color: var(--color-fg);
-            font-family: "departure-mono", monospace;
-            font-size: var(--font-sm);
-            text-transform: uppercase;
-          }
-
-          a:hover {
-            color: var(--color-primary);
-          }
         }
 
         .prose {
@@ -93,11 +49,10 @@ const { title, description, pubDate, headings } = Astro.props;
           flex-direction: column;
           gap: var(--space-xl);
           color: var(--color-fg);
-          font-family: "gambetta", serif;
           font-size: var(--font-sm);
           font-weight: var(--weight-medium);
-          border-right: 1px solid var(--color-gray-200);
           min-width: 100%;
+          text-transform: lowercase;
         }
       }
 
@@ -106,12 +61,12 @@ const { title, description, pubDate, headings } = Astro.props;
       }
       :global(.prose a) {
         color: var(--color-primary);
+        text-decoration: underline dotted;
       }
       :global(.prose a):hover {
         text-decoration: none;
       }
       :global(.prose h2) {
-        font-family: "departure-mono", monospace;
         font-size: var(--font-sm);
         font-weight: var(--weight-regular);
       }
@@ -126,17 +81,14 @@ const { title, description, pubDate, headings } = Astro.props;
       }
       :global(.prose code) {
         padding: 3px 6px;
-        font-family: "commit-mono", monospace;
         font-size: var(--font-xs);
-          background: var(--color-gray-150);
+        background: var(--color-gray-150);
         color: var(--color-fg);
-        border-radius: 6px;
+        border: 1px dashed var(--color-gray-250);
       }
       :global(.prose pre) {
-        padding: var(--space-md);
-        font-family: "commit-mono", monospace;
-        font-size: var(--font-xs);
-        border-radius: 6px;
+        padding: var(--space-lg);
+        border: 1px dashed var(--color-gray-250);
         background-color: var(--color-gray-100) !important;
       }
       html.dark :global(.prose pre) {
@@ -144,19 +96,24 @@ const { title, description, pubDate, headings } = Astro.props;
       }
       :global(.prose pre > code) {
         padding: 0;
+        font-size: var(--font-sm);
+        line-height: 2;
+        border: none;
       }
       html.dark :global(.prose pre > code > * > *) {
         background-color: var(--color-gray-100) !important;
       }
       :global(.prose ul) {
         margin-top: calc(var(--space-xs) * -1);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2xs);
       }
       :global(.prose ul li) {
         color: var(--color-primary);
       }
       :global(.prose ul li::before) {
         margin-right: var(--space-2xs);
-        font-family: "departure-mono";
         content: "> ";
       }
 
@@ -168,16 +125,15 @@ const { title, description, pubDate, headings } = Astro.props;
             .prose {
               border: none;
             }
-
-            .sidebar {
-              display: none;
-            }
           }
         }
       }
 
       @media (max-width: 500px) {
         article {
+          p, h1.title, pre, code, h2, ul, ol, li, a, a.back {
+            font-size: var(--font-xs);
+          }
           .top, .prose {
             padding: var(--space-lg);
           }
@@ -194,20 +150,13 @@ const { title, description, pubDate, headings } = Astro.props;
             <h1 class="title">{title}</h1>
             <p class="date">{pubDate.toString().slice(4, 10).toUpperCase()}</p>
           </div>
-          <Divider />
           <div class="middle">
             <div class="prose">
               <slot />
             </div>
-            <aside class="sidebar">
-              {headings?.map((heading) => (
-                <a href={`#${heading.slug}`}>{heading.text}</a>
-              ))}
-            </aside>
           </div>
         </article>
       </main>
-      <Divider />
       <Footer />
     </div>
 	</body>
