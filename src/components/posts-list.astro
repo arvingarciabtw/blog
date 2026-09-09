@@ -9,7 +9,7 @@ const { posts, year, categories = [] } = Astro.props;
     {categories.map((category: string, index: number) => (
       <>
       <p class={`category ${category.toLowerCase()}`} >{category}</p>
-        {index < categories.length - 1 && <p class="spacer">•</p>}
+        {index < categories.length - 1 && <p class="spacer">*</p>}
       </>
     ))}
     </div>
@@ -71,7 +71,7 @@ const { posts, year, categories = [] } = Astro.props;
       break-inside: avoid; 
       display: inline-block;
       width: 100%;
-      margin-bottom: var(--space-md);
+      margin-bottom: var(--space-xs);
 
       .link {
         display: flex;
@@ -89,6 +89,11 @@ const { posts, year, categories = [] } = Astro.props;
         color: var(--color-fg);
         text-transform: lowercase;
         line-height: 2;
+      }
+      .title::before {
+        padding-right: var(--space-sm);
+        content: "*";
+        color: var(--color-primary);
       }
 
       .separator {
@@ -108,7 +113,6 @@ const { posts, year, categories = [] } = Astro.props;
 
     .post:hover .title {
       color: var(--color-primary);
-      text-decoration: underline;
     }
     .post:hover .separator {
       border-color: var(--color-primary);

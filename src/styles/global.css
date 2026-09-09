@@ -1,6 +1,6 @@
 /* == VARIABLES == */
 :root {
-  --color-primary: oklch(0.5399 0.1906 257.48); /* GitHub accent blue #0969da */
+  --color-primary: oklch(0.4672 0.3027 266.24); /* a bright better contrast blue */
   --color-bg: oklch(1 0 0); /* #ffffff */
   --color-fg: oklch(0.2542 0.0111 254.04); /* #1f2328 */
   --color-gray-900: oklch(0.2542 0.0111 254.04);
