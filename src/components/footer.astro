@@ -12,19 +12,15 @@
         class="link"
         href="https://github.com/arvingarciabtw"
         target="_blank"
-        rel="noopener noreferrer">GitHub</a
-      >
-    </li>
-    <li class="social">
-      <a
-        class="link"
-        href="https://www.arvingarcia.com/"
-        target="_blank"
-        rel="noopener noreferrer">Folio</a
+        rel="noopener noreferrer">Source</a
       >
     </li>
   </ul>
-  <p class="developer">© 2026 Arvin Garcia</p>
+  <p class="developer">
+    <a href="https://arvingarcia.com" target="_blank" rel="noopener noreferrer">
+      @arvingarciabtw
+    </a>
+  </p>
   <div class="modes">
     <ThemeIcon />
   </div>
@@ -43,6 +39,13 @@
     .developer, .socials-list {
       font-size: var(--font-sm);
       text-transform: lowercase;
+      a {
+        color: var(--color-fg);
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     .socials-list {
