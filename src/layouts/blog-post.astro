@@ -81,6 +81,7 @@ const { title, description, pubDate, headings } = Astro.props;
       }
       :global(.prose code) {
         padding: 3px 6px;
+        font-family: "commit-mono", monospace;
         font-size: var(--font-sm);
         background: var(--color-gray-150);
         color: var(--color-fg);
@@ -91,9 +92,6 @@ const { title, description, pubDate, headings } = Astro.props;
         background: var(--color-primary);
         color: var(--color-bg);
         border: none;
-        &::after {
-          content: " 🡥"
-        }
       }
       :global(.prose pre) {
         padding: var(--space-lg);

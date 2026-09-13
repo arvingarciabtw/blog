@@ -18,6 +18,7 @@ const { posts, year, categories = [] } = Astro.props;
     {posts.map((post: { id: string, data: { title: string, description: string, pubDate: Date } }) => (
     <li class="post">            
       <a href={`/${post.id}`} class="link">
+        <p class="bullet">*</p>
         <p class="title">{post.data.title}</p>
         <div class="separator"></div>
         <p class="date">{post.data.pubDate.toString().slice(4, 10).toUpperCase()}</p>
@@ -81,6 +82,10 @@ const { posts, year, categories = [] } = Astro.props;
         text-decoration: none;
         color: var(--color-gray-600);
         transition: color 0.3s ease;
+
+        p.bullet {
+          color: var(--color-primary) !important;
+        }
       }
 
       .title {
@@ -89,11 +94,6 @@ const { posts, year, categories = [] } = Astro.props;
         color: var(--color-fg);
         text-transform: lowercase;
         line-height: 2;
-      }
-      .title::before {
-        padding-right: var(--space-sm);
-        content: "*";
-        color: var(--color-primary);
       }
 
       .separator {
@@ -147,6 +147,9 @@ const { posts, year, categories = [] } = Astro.props;
           .category {
             font-size: var(--font-xs);
           }
+          .spacer {
+            font-size: var(--font-xs);
+          }
         }
       }
 
@@ -156,9 +159,17 @@ const { posts, year, categories = [] } = Astro.props;
         .post {
           .link {
             display: grid;
-            grid-template-columns: 1fr 50px;
+            grid-template-columns: max-content 1fr 50px;
             align-items: start;
-            gap: var(--space-xl);
+            gap: var(--space-lg);
+
+            .bullet {
+              margin-top: 3px;
+              color: var(--primary);
+            }
+            .title {
+              margin-left: -0.5rem;
+            }
           }
           .title {
             max-width: 100%;
