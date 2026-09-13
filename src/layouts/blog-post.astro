@@ -81,10 +81,19 @@ const { title, description, pubDate, headings } = Astro.props;
       }
       :global(.prose code) {
         padding: 3px 6px;
-        font-size: var(--font-xs);
+        font-size: var(--font-sm);
         background: var(--color-gray-150);
         color: var(--color-fg);
         border: 1px dashed var(--color-gray-250);
+        text-transform: none;
+      }
+      :global(.prose a > code) {
+        background: var(--color-primary);
+        color: var(--color-bg);
+        border: none;
+        &::after {
+          content: " 🡥"
+        }
       }
       :global(.prose pre) {
         padding: var(--space-lg);
@@ -111,6 +120,7 @@ const { title, description, pubDate, headings } = Astro.props;
       }
       :global(.prose ul li) {
         color: var(--color-primary);
+        text-transform: none;
       }
       :global(.prose ul li::before) {
         margin-right: var(--space-2xs);
