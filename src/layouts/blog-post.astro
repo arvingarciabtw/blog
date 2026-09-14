@@ -21,6 +21,7 @@ const { title, description, pubDate, headings } = Astro.props;
         }
 
         .back {
+          width: max-content;
           text-decoration: none;
           color: var(--color-fg);
           font-size: var(--font-md);
@@ -141,6 +142,9 @@ const { title, description, pubDate, headings } = Astro.props;
         article {
           p, h1.title, pre, code, h2, ul, ol, li, a, a.back {
             font-size: var(--font-xs);
+          }
+          .title {
+            margin-top: var(--space-2xl);
           }
           .top, .prose {
             padding: var(--space-lg);
