@@ -1,31 +1,13 @@
-<img align="center" src="./public/images/circle-blue.svg" width="100%" height="32px"/>
+# blog
 
-<div align="center">
+at the moment, this blog is very under-featured. i don't even have a table of contents for each article yet. the ultimate goal though is to make it something like [josh comeau's site](https://www.joshwcomeau.com/css/anchor-positioning/), where literally each article is *filled* with interactive components and demos that actually serve the reader's learning.
 
-[![Astro](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff)](#)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)](#)
-[![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)](#)
+> a fun fact: it's through his [flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/) and [grid](https://www.joshwcomeau.com/css/interactive-guide-to-grid/) articles that i got a good grasp of the concepts!
 
-</div>
+---
 
-My [blog](https://blog.arvingarcia.com/) where I write about what I'm currently learning. Not really meant to be a place for detailed information on concepts, but simply my insights on stuff I'm learning at the time. In a way, it also serves as a timeline of my learning journey.
+here's the [rss feed url](https://blog.arvingarcia.com/rss.xml). i personally like to use [nom](https://github.com/guyfedwards/nom), an rss feed reader in the terminal!
 
-### Installation
+---
 
-```bash
-# Clone the repository
-git clone <repository-url>
-cd blog
-
-# Install dependencies
-pnpm install
-
-# Start development server
-pnpm dev
-```
-
-Visit [`http://localhost:4321`](http://localhost:4321) to see the app in action.
-
-### Resources
-
-Icons are from [Feather](https://feathericons.com/). I used the [astro-feather](https://github.com/gabrlyg/astro-feather) library for implementation.
+〜⁠(⁠꒪⁠꒳⁠꒪⁠)⁠〜
